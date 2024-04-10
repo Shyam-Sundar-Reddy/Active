@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahat</title>
+
+  <!-- css links  -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900" rel="stylesheet" type="text/css"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap"
+    rel="stylesheet">
+  <!-- bootstrap link  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/selectize.css">
+  <!-- font awesome link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+</head>
+
+<body class="mahat-wrapper">
+
+  <!-- header  -->
+  <header>
+    <div class="header_wrapper custom-container">
+      <div class="dashboard_logo">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="my_project_wrapper">
+        <a class="my_project active">
+          <div class="folder"><img src="./images/user_h.png" alt="project"></div>
+          <p class="font-15">My Project</p>
+        </a>
+        <a class="my_project ">
+          <div class="folder"><img src="./images/star.png" alt="current"></div>
+          <p class="font-15">Current Project</p>
+        </a>
+
+        <div class="dropdown my_project">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuSetting"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="folder"><img src="./images/set.png" alt="dropdownMenuSetting"></div>
+            <p class="font-15">Settings</p>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuSetting">
+            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_236_573)">
+                <mask id="mask0_236_573" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                  <path d="M0 1.90735e-06H20V20H0V1.90735e-06Z" fill="white"/>
+                </mask>
+                <g mask="url(#mask0_236_573)">
+                  <path d="M8.39844 0.625V1.94969C7.29492 2.16266 6.26902 2.59309 5.37109 3.20043L4.43668 2.26602L2.22695 4.4757L3.16133 5.41012C2.55398 6.30805 2.12363 7.33402 1.91062 8.4375H0.585938V11.5625H1.91062C2.12363 12.666 2.55402 13.6919 3.16137 14.5899L2.22695 15.5243L4.43668 17.7339L5.37105 16.7996C6.26898 17.4069 7.29492 17.8373 8.39844 18.0503V19.375H11.5234V0.625H8.39844Z" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.5234 5.58496C11.0341 5.41168 10.5097 5.3125 9.96094 5.3125C7.37211 5.3125 5.27344 7.41117 5.27344 10C5.27344 12.5888 7.37211 14.6875 9.96094 14.6875C10.5097 14.6875 11.0341 14.5883 11.5234 14.4151" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.4141 10C19.4141 10.6472 18.8894 11.1719 18.2422 11.1719C17.595 11.1719 17.0703 10.6472 17.0703 10C17.0703 9.35281 17.595 8.82812 18.2422 8.82812C18.8894 8.82812 19.4141 9.35281 19.4141 10Z" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.4141 14.6875C19.4141 15.3347 18.8894 15.8594 18.2422 15.8594C17.595 15.8594 17.0703 15.3347 17.0703 14.6875C17.0703 14.0403 17.595 13.5156 18.2422 13.5156C18.8894 13.5156 19.4141 14.0403 19.4141 14.6875Z" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.6797 18.2031C16.6797 18.8503 16.155 19.375 15.5078 19.375C14.8606 19.375 14.3359 18.8503 14.3359 18.2031C14.3359 17.5559 14.8606 17.0312 15.5078 17.0312C16.155 17.0312 16.6797 17.5559 16.6797 18.2031Z" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.0703 10H11.5234" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.4141 5.3125C19.4141 4.66531 18.8894 4.14062 18.2422 4.14062C17.595 4.14062 17.0703 4.66531 17.0703 5.3125C17.0703 5.95969 17.595 6.48438 18.2422 6.48438C18.8894 6.48438 19.4141 5.95969 19.4141 5.3125Z" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.5234 18.2031H14.3359" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16.6797 1.79688C16.6797 1.14969 16.155 0.625 15.5078 0.625C14.8606 0.625 14.3359 1.14969 14.3359 1.79688C14.3359 2.44406 14.8606 2.96875 15.5078 2.96875C16.155 2.96875 16.6797 2.44406 16.6797 1.79688Z" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.5234 1.79688H14.3359" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.5234 7.26562H15.8984L17.346 6.0593" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.346 13.9407L15.8984 12.7343H11.5234" stroke="#54575C" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_236_573">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>Tech
+                Settings</a></li>
+            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <g clip-path="url(#clip0_236_639)">
+                <path d="M18.4382 14.2924H17.8561V13.5574C17.8561 11.8169 16.4401 10.401 14.6997 10.401H13.4772H10.7168V7.68252H12.4629C13.324 7.68252 14.0246 6.98193 14.0246 6.12076V2.32982C14.0246 1.46869 13.324 0.768066 12.4629 0.768066H7.79777C6.93664 0.768066 6.23605 1.46865 6.23605 2.32982V6.12072C6.23605 6.98186 6.93664 7.68248 7.79777 7.68248H9.54387V10.401H6.82254H5.32633C3.58586 10.401 2.17 11.8169 2.17 13.5573V14.2924H1.56176C0.700586 14.2924 0 14.993 0 15.8542V17.6701C0 18.5312 0.700586 19.2318 1.56176 19.2318H3.95105C4.81219 19.2318 5.51277 18.5312 5.51277 17.6701V15.8542C5.51277 14.993 4.81219 14.2924 3.95105 14.2924H3.34289V13.5574C3.34289 12.4637 4.23266 11.574 5.32629 11.574H6.8225H9.54383V14.2924H8.93566C8.07449 14.2924 7.37391 14.993 7.37391 15.8542V17.6701C7.37391 18.5312 8.07449 19.2318 8.93566 19.2318H11.325C12.1861 19.2318 12.8867 18.5312 12.8867 17.6701V15.8542C12.8867 14.993 12.1861 14.2924 11.325 14.2924H10.7168V11.574H13.4773H14.6998C15.7934 11.574 16.6832 12.4637 16.6832 13.5574V14.2924H16.0489C15.1878 14.2924 14.4872 14.993 14.4872 15.8542V17.6701C14.4872 18.5312 15.1878 19.2318 16.0489 19.2318H18.4382C19.2994 19.2318 20 18.5312 20 17.6701V15.8542C20 14.993 19.2994 14.2924 18.4382 14.2924ZM3.95109 15.4654C4.16547 15.4654 4.33988 15.6398 4.33988 15.8542V17.6701C4.33988 17.8844 4.16547 18.0588 3.95109 18.0588H1.5618C1.34742 18.0588 1.17297 17.8844 1.17297 17.6701V15.8542C1.17297 15.6398 1.34742 15.4654 1.5618 15.4654H3.95109ZM11.325 15.4654C11.5394 15.4654 11.7138 15.6398 11.7138 15.8542V17.6701C11.7138 17.8844 11.5394 18.0588 11.325 18.0588H8.9357C8.72133 18.0588 8.54688 17.8844 8.54688 17.6701V15.8542C8.54688 15.6398 8.72133 15.4654 8.9357 15.4654H11.325ZM7.79777 6.50959C7.5834 6.50959 7.40898 6.33514 7.40898 6.12076V2.32982C7.40898 2.11545 7.5834 1.941 7.79777 1.941H12.4629C12.6772 1.941 12.8516 2.11541 12.8516 2.32982V6.12072C12.8516 6.3351 12.6772 6.50955 12.4629 6.50955H7.79777V6.50959ZM18.8271 17.6701C18.8271 17.8845 18.6526 18.0589 18.4382 18.0589H16.0489C15.8346 18.0589 15.6602 17.8845 15.6602 17.6701V15.8542C15.6602 15.6399 15.8346 15.4654 16.0489 15.4654H18.4382C18.6526 15.4654 18.8271 15.6398 18.8271 15.8542V17.6701Z" fill="#1780DD"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_236_639">
+                  <rect width="20" height="20" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>UX
+                Settings</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="user_login_wrapper">
+        <p class="user_name font-16">John Doe</p>
+        <div class="user_logo"><img src="./images/userlogo.png" alt="userlogo"></div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- body section  -->
+  <section>
+    <div class="dashboard_wrapper custom-container">
+      <div class=" dashboard_row">
+        <div class="dashboard_left">
+          <div class="left_section">
+            <!-- <div class="left_head_section">
+                        <h1 class="font-24">Welcome Sandbox41!</h1>
+                        <ul>
+                          <li class="active"><a href="#">Inception</a></li>
+                          <li><a href="#">Build</a></li>
+                          <li><a href="#">Transition</a></li>
+                          <li><a href="#">Projects</a></li>
+                        </ul>
+                      </div> -->
+            <div class="left_content_section">
+              <div class="overview_section">
+                <!-- <h3 class="font-20">Overview</h3> -->
+               <div class="create_project overview_lst_search">
+                <h3 class="font-20">My Projects</h3>
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+              </div>
+
+                <div class="project_lst_wrapper">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="project_lst project-content-lst green_clr ">
+                        <a href="#">
+                        <div class="project_lst_tlt">
+                          <img src="./images/whatsapp_ico.png" />
+                          <div class="project_tlt">
+                            <h2>Whatsapp Testing</h2>
+                            <h3><img src="./images/bulp.png" />SaaS based Platform for Consumers</h3>
+                          </div>
+                        </div>
+                        <div class="project_consumes">
+                          <ul>
+                            <li><img src="./images/folder-black.png" />MVC And WEBAPI</li>
+                            <li><img src="./images/sql.png" />MS SQL Server</li>
+                            <li><img src="./images/system.png" />Fluent Design</li>
+                          </ul>
+                        </div>
+                      </a>
+                        <div class="project_foot">
+
+                          <div class="plat_logo"> <a href="#"><img src="./images/users.png"
+                                alt="user" /></a><span>0</span></div>
+                          <div class="project_foot_btn">
+                            <button type="button">7 Entities</button>
+                            <button type="button">28 Actions</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="project_lst project-content-lst green_clr ">
+                        <a href="#">
+                        <div class="project_lst_tlt">
+                          <img src="./images/finance.png" />
+                          <div class="project_tlt">
+                            <h2>Circle Mobile Application </h2>
+                            <h3><img src="./images/bulp.png" />Finance Operation</h3>
+                          </div>
+                        </div>
+                        <div class="project_consumes">
+                          <ul>
+                            <li><img src="./images/folder-black.png" />MVC And WEBAPI</li>
+                            <li><img src="./images/sql.png" />MS SQL Server</li>
+                            <li><img src="./images/system.png" />Fluent Design</li>
+                          </ul>
+                        </div>
+                        </a>
+                        <div class="project_foot">
+
+                          <div class="plat_logo"> <a href="#"><img src="./images/users.png"
+                                alt="user" /></a><span>0</span></div>
+                          <div class="project_foot_btn">
+                            <button type="button">7 Entities</button>
+                            <button type="button">28 Actions</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="project_lst project-content-lst green_clr ">
+                        <a href="#">
+                        <div class="project_lst_tlt">
+                          <img src="./images/application.png" />
+                          <div class="project_tlt">
+                            <h2>Circle Mobile Application </h2>
+                            <h3><img src="./images/bulp.png" />SaaS based Platform for Consumers</h3>
+                          </div>
+                        </div>
+                        <div class="project_consumes">
+                          <ul>
+                            <li><img src="./images/folder-black.png" />MVC And WEBAPI</li>
+                            <li><img src="./images/sql.png" />MS SQL Server</li>
+                            <li><img src="./images/system.png" />Fluent Design</li>
+                          </ul>
+                        </div>
+                        </a>
+                        <div class="project_foot">
+
+                          <div class="plat_logo"> <a href="#"><img src="./images/users.png"
+                                alt="user" /></a><span>0</span></div>
+                          <div class="project_foot_btn">
+                            <button type="button">7 Entities</button>
+                            <button type="button">28 Actions</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="project_lst project-content-lst green_clr ">
+                        <a href="#">
+                        <div class="project_lst_tlt">
+                          <img src="./images/application.png" />
+                          <div class="project_tlt">
+                            <h2>Circle Mobile Application </h2>
+                            <h3><img src="./images/bulp.png" />SaaS based Platform for Consumers</h3>
+                          </div>
+                        </div>
+                        <div class="project_consumes">
+                          <ul>
+                            <li><img src="./images/folder-black.png" />MVC And WEBAPI</li>
+                            <li><img src="./images/sql.png" />MS SQL Server</li>
+                            <li><img src="./images/system.png" />Fluent Design</li>
+                          </ul>
+                        </div>
+                        </a>
+                        <div class="project_foot">
+
+                          <div class="plat_logo"> <a href="#"><img src="./images/users.png"
+                                alt="user" /></a><span>0</span></div>
+                          <div class="project_foot_btn">
+                            <button type="button">7 Entities</button>
+                            <button type="button">28 Actions</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="project_lst project-content-lst green_clr ">
+                        <a href="#">
+                        <div class="project_lst_tlt">
+                          <img src="./images/whatsapp_ico.png" />
+                          <div class="project_tlt">
+                            <h2>Whatsapp Testing</h2>
+                            <h3><img src="./images/bulp.png" />SaaS based Platform for Consumers</h3>
+                          </div>
+                        </div>
+                        <div class="project_consumes">
+                          <ul>
+                            <li><img src="./images/folder-black.png" />MVC And WEBAPI</li>
+                            <li><img src="./images/sql.png" />MS SQL Server</li>
+                            <li><img src="./images/system.png" />Fluent Design</li>
+                          </ul>
+                        </div>
+                        </a>
+                        <div class="project_foot">
+
+                          <div class="plat_logo"> <a href="#"><img src="./images/users.png"
+                                alt="user" /></a><span>0</span></div>
+                          <div class="project_foot_btn">
+                            <button type="button">7 Entities</button>
+                            <button type="button">28 Actions</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                      <div class="project_lst project-content-lst green_clr ">
+                        <a href="#">
+                        <div class="project_lst_tlt">
+                          <img src="./images/finance.png" />
+                          <div class="project_tlt">
+                            <h2>Circle Mobile Application </h2>
+                            <h3><img src="./images/bulp.png" />Finance Operation</h3>
+                          </div>
+                        </div>
+                        <div class="project_consumes">
+                          <ul>
+                            <li><img src="./images/folder-black.png" />MVC And WEBAPI</li>
+                            <li><img src="./images/sql.png" />MS SQL Server</li>
+                            <li><img src="./images/system.png" />Fluent Design</li>
+                          </ul>
+                        </div>
+                        </a>
+                        <div class="project_foot">
+
+                          <div class="plat_logo"> <a href="#"><img src="./images/users.png"
+                                alt="user" /></a><span>0</span></div>
+                          <div class="project_foot_btn">
+                            <button type="button">7 Entities</button>
+                            <button type="button">28 Actions</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="project_lst project-content-lst green_clr ">
+                        <a href="#">
+                        <div class="project_lst_tlt">
+                          <img src="./images/finance.png" />
+                          <div class="project_tlt">
+                            <h2>Circle Mobile Application </h2>
+                            <h3><img src="./images/bulp.png" />Finance Operation</h3>
+                          </div>
+                        </div>
+                        <div class="project_consumes">
+                          <ul>
+                            <li><img src="./images/folder-black.png" />MVC And WEBAPI</li>
+                            <li><img src="./images/sql.png" />MS SQL Server</li>
+                            <li><img src="./images/system.png" />Fluent Design</li>
+                          </ul>
+                        </div>
+                        </a>
+                        <div class="project_foot">
+
+                          <div class="plat_logo"> <a href="#"><img src="./images/users.png"
+                                alt="user" /></a><span>0</span></div>
+                          <div class="project_foot_btn">
+                            <button type="button">7 Entities</button>
+                            <button type="button">28 Actions</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="dashboard_right">
+
+          <div class="loader"><img src="./images/loder.gif" /></div>
+          <div class="AIChat">
+            <div class="chat-head-tlt">Mahat<span>AI</span></div>
+            <div class="chat_content_section">
+              <div class="chat_left">
+                <h5 class="chat_title">Foster Digital Innovation</h5>
+                <p class="chat_content">
+                  Apps that transform an industry through SaaS Platforms or Digital Marketplaces
+                </p>
+              </div>
+              <div class="chat_right blue-clr"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none">
+                  <g clip-path="url(#clip0_108_17972)">
+                    <path d="M11.9598 1V1.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19.187 3.86096L18.5985 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M21.9197 11.0881H21.1295" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M2 11.0881H2.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.73273 3.86096L5.3212 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M13.4503 23.5938H10.4694C9.8258 23.5938 9.30408 23.0721 9.30408 22.4285V20.1254H14.6155V22.4285C14.6156 23.0721 14.0939 23.5938 13.4503 23.5938Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M11.9598 19.8656V12.0256" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3309 10.9987C11.1055 12.1615 12.8141 12.1615 13.5887 10.9987" stroke="#00AD00"
+                      stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M18.5524 11.1358C18.5524 7.49484 15.6008 4.54321 11.9598 4.54321C8.31887 4.54321 5.36725 7.49484 5.36725 11.1358C5.36725 13.4311 6.54048 15.4521 8.31972 16.6327L8.33697 19.6604C8.33908 19.9178 8.54833 20.1253 8.80572 20.1253H15.1397C15.3986 20.1253 15.6085 19.9154 15.6085 19.6566V16.6271C17.3829 15.4457 18.5524 13.4275 18.5524 11.1358Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_108_17972">
+                      <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div>
+                </div>
+              </div>
+            </div>
+            <div class="chat_content_section">
+              <div class="chat_left">
+                <h5 class="chat_title">Digitalize Manual Processes</h5>
+                <p class="chat_content">
+                  Build Apps for use within an organization, largely limited to a single business function like Finance,
+                  HR, Sales or Purchase
+                </p>
+              </div>
+              <div class="chat_right green-clr"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none">
+                  <g clip-path="url(#clip0_108_17972)">
+                    <path d="M11.9598 1V1.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19.187 3.86096L18.5985 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M21.9197 11.0881H21.1295" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M2 11.0881H2.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.73273 3.86096L5.3212 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M13.4503 23.5938H10.4694C9.8258 23.5938 9.30408 23.0721 9.30408 22.4285V20.1254H14.6155V22.4285C14.6156 23.0721 14.0939 23.5938 13.4503 23.5938Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M11.9598 19.8656V12.0256" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3309 10.9987C11.1055 12.1615 12.8141 12.1615 13.5887 10.9987" stroke="#00AD00"
+                      stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M18.5524 11.1358C18.5524 7.49484 15.6008 4.54321 11.9598 4.54321C8.31887 4.54321 5.36725 7.49484 5.36725 11.1358C5.36725 13.4311 6.54048 15.4521 8.31972 16.6327L8.33697 19.6604C8.33908 19.9178 8.54833 20.1253 8.80572 20.1253H15.1397C15.3986 20.1253 15.6085 19.9154 15.6085 19.6566V16.6271C17.3829 15.4457 18.5524 13.4275 18.5524 11.1358Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_108_17972">
+                      <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div>
+                </div>
+              </div>
+            </div>
+            <div class="chat_content_section">
+              <div class="chat_left">
+                <h5 class="chat_title">Build Digital Core</h5>
+                <p class="chat_content">
+                  Apps that are the digital backbone for an enterprise, its branches that span across core business functions that are industry specific – Manufacturing, Patient Care
+                </p>
+              </div>
+              <div class="chat_right orange-clr"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none">
+                  <g clip-path="url(#clip0_108_17972)">
+                    <path d="M11.9598 1V1.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19.187 3.86096L18.5985 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M21.9197 11.0881H21.1295" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M2 11.0881H2.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.73273 3.86096L5.3212 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M13.4503 23.5938H10.4694C9.8258 23.5938 9.30408 23.0721 9.30408 22.4285V20.1254H14.6155V22.4285C14.6156 23.0721 14.0939 23.5938 13.4503 23.5938Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M11.9598 19.8656V12.0256" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3309 10.9987C11.1055 12.1615 12.8141 12.1615 13.5887 10.9987" stroke="#00AD00"
+                      stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M18.5524 11.1358C18.5524 7.49484 15.6008 4.54321 11.9598 4.54321C8.31887 4.54321 5.36725 7.49484 5.36725 11.1358C5.36725 13.4311 6.54048 15.4521 8.31972 16.6327L8.33697 19.6604C8.33908 19.9178 8.54833 20.1253 8.80572 20.1253H15.1397C15.3986 20.1253 15.6085 19.9154 15.6085 19.6566V16.6271C17.3829 15.4457 18.5524 13.4275 18.5524 11.1358Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_108_17972">
+                      <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div>
+                </div>
+              </div>
+            </div>
+            <div class="chat_content_section">
+              <div class="chat_left">
+                <h5 class="chat_title">Provide Digital Experiences</h5>
+                <p class="chat_content">
+                  Apps to connect with business partners that work across two or more business functions
+                </p>
+              </div>
+              <div class="chat_right violet-clr"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  fill="none">
+                  <g clip-path="url(#clip0_108_17972)">
+                    <path d="M11.9598 1V1.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19.187 3.86096L18.5985 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M21.9197 11.0881H21.1295" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M2 11.0881H2.79027" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.73273 3.86096L5.3212 4.44943" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M13.4503 23.5938H10.4694C9.8258 23.5938 9.30408 23.0721 9.30408 22.4285V20.1254H14.6155V22.4285C14.6156 23.0721 14.0939 23.5938 13.4503 23.5938Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M11.9598 19.8656V12.0256" stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3309 10.9987C11.1055 12.1615 12.8141 12.1615 13.5887 10.9987" stroke="#00AD00"
+                      stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                      d="M18.5524 11.1358C18.5524 7.49484 15.6008 4.54321 11.9598 4.54321C8.31887 4.54321 5.36725 7.49484 5.36725 11.1358C5.36725 13.4311 6.54048 15.4521 8.31972 16.6327L8.33697 19.6604C8.33908 19.9178 8.54833 20.1253 8.80572 20.1253H15.1397C15.3986 20.1253 15.6085 19.9154 15.6085 19.6566V16.6271C17.3829 15.4457 18.5524 13.4275 18.5524 11.1358Z"
+                      stroke="#00AD00" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_108_17972">
+                      <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="button_section_stART">
+              <button class="start_button">Get Started <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                  viewBox="0 0 18 18" fill="none">
+                  <path d="M10.8225 4.44751L15.375 9.00001L10.8225 13.5525" stroke="white" stroke-width="1.5"
+                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M2.625 9H15.2475" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></button>
+            </div>
+            <div class="robo_mg">
+                <img src="./images/robo.png"/>
+            </div>
+          </div>
+
+          <div class="chat_toggle dash_board_chat"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- jquery link  -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="./js/custom.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/selectize.min.js"></script>
+
+  <!-- bootstrap link  -->
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+
+      $(".project_collapse img").click(function () {
+        $(".project_list_collapse .project_consumes").toggle();
+      });
+
+      $('.next').click(function () {
+        $('.business_detail').hide();
+        $('.project_details').show();
+      });
+      $('.previous').click(function () {
+        $('.business_detail').show();
+        $('.project_details').hide();
+      });
+
+      $('.refresh').click(function () {
+        $('.search_highted_top').show();
+        $('.create_project_carousel').show();
+        $('.search_highted_top input').show();
+        $(".search_highted_top input").val('');
+        $('.trading_lst').hide();
+        $('.business_detail').hide();
+        $('.project_details').hide();
+      });
+
+      var availableTags = [
+        "HealthCare",
+        "To build a marketplace for services ",
+        "To build a marketplace for goods ",
+        "To build a marketplace for services ",
+        "To build a digital SaaS offering for businesses ",
+        "To build  a digital SaaS offering for consumers",
+        "To build a digital platform for my manufacturing business",
+        "To build a digital SaaS offering for businesses "
+      ];
+      $("#tags").autocomplete({
+        source: availableTags,
+        select: function (event, ui) {
+          addClass();
+        }
+      });
+
+
+    });
+
+    function addClass() {
+      document.querySelector("#tags").style.display = "none";
+      document.querySelector(".trading_lst").style.display = "block";
+      document.querySelector(".business_detail").style.display = "block";
+      document.querySelector(".create_project_carousel").style.display = "none";
+
+    }
+    let div = document.createElement("div");
+    let p = document.createElement("p");
+
+    var uploaderBtn = document.querySelector(".input")
+    var uploadername = document.querySelector(".filepath")
+    uploaderBtn.addEventListener('change', function (event) {
+      if (event.target.files.length > 0) {
+        var src = URL.createObjectURL(event.target.files[0]);
+        var preview = document.querySelector(".img").src = src;
+        uploadername.innerHTML = event.target.files[0].name
+      }
+    })
+  </script>
+  <script>
+    $(document).ready(function () {
+
+      $('#select-all-checkbox').selectize({
+        preload: true,
+        plugins: ['remove_button'],
+
+        onInitialize: function () {
+          // Open the first option's content onload
+          var selectize = this;
+          selectize.open();
+          var firstOption = selectize.$dropdown_content.find('[data-value="1"]');
+          if (firstOption.length > 0) {
+            firstOption.addClass('highlighted');
+          }
+        },
+        onChange: function (value) {
+          // Highlight the selected option
+          this.$dropdown_content.find('.highlighted').removeClass('highlighted');
+          var selectedOption = this.$dropdown_content.find('[data-value="' + value + '"]');
+          if (selectedOption.length > 0) {
+            selectedOption.addClass('highlighted');
+          }
+        },
+
+        // render: {
+
+        //   option: function(data, escape) {
+
+        //     if (data.value === 'select_all') {
+
+        //       return '<div><input type="checkbox" class="select-all-checkbox" id="select-all-checkbox" /> <label for="select-all-checkbox">' + escape(data.text) + '</label></div>';
+
+        //     } else {
+
+        //       return '<div><input type="checkbox" value="' + escape(data.value) + '" ' + (data['$is_selected'] ? 'checked' : '') + ' /> ' + escape(data.text) + '</div>';
+
+        //     }
+
+        //   }
+
+        // },
+        onItemRemove: function (value, $item) {
+          // Callback for item removal
+          var labelText = $item.text(); // Get the label of the removed item
+          var $dropdown = this.$dropdown_content; // Get the dropdown content element
+
+          // Create a new option element and append it to the dropdown
+          var $newOption = $('<div class="option" data-selectable value="' + value + '">' + labelText + '</div>');
+          $dropdown.append($newOption);
+        },
+
+        onChange: function (value) {
+
+          if (value.includes('select_all')) {
+
+            const allOptions = Object.keys(this.options);
+
+            this.setValue(allOptions.filter(option => option !== 'select_all'));
+
+          } else {
+
+            const selectAllCheckbox = document.querySelector('.select-all-checkbox');
+
+            if (selectAllCheckbox) {
+
+              selectAllCheckbox.checked = value.length === allOptions.length - 1;
+
+            }
+
+          }
+
+        }
+
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

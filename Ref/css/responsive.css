@@ -1,0 +1,341 @@
+@media screen and (max-width:1909px){
+    .user_det_img,.validity_wraper,.user_name_input,.cancel_wrapper,.choose_type_date  {
+        margin-bottom: 10px;
+    }
+    .cancel_wrapper{
+        margin-right: 10px;
+    }
+    }
+    @media screen and (max-width:1600px){
+        .dashboard_right {
+            width: 400px;
+            max-width: 400px;
+        }
+        .dashboard_left{
+            padding-right: 400px;
+        }
+        .dash_board_chat{
+            right: 385px;
+        }
+        .dashboard_row.active .dashboard_right{
+            right:-390px;
+        }
+    }
+
+ @media screen and (max-width:1200px){
+    .user_name_input,.choose_type_date input, .user_name_input:nth-child(3),.choose_type_date,.choose_type_date select {
+        width: auto;
+        min-width: unset;
+    }
+    /* .choose_type_date{
+        flex-wrap: wrap;
+    } */
+    .choose_type_date input{
+        margin-bottom: 10px;
+    }
+    .dashboard_left{
+        padding-right: 0;
+    }
+
+} 
+/* @media screen and (max-width:991px){
+    .deisgn_entity_content {
+        width: calc(100% - 20px);
+    }
+} */
+@media screen and (max-width:767px){
+    .my_project_wrapper {
+        order: 3;
+        width: 100%;
+        flex: unset;
+    }   
+    .header_wrapper {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .dashboard_logo{
+        border-right: 0;
+    }
+    .my_project:first-child {
+        padding-left: 0;
+    }
+}
+
+/* @media only screen and (min-width:320px) and (max-width:1635px)
+{
+.user_detail_wrapper, .click_req, .design_entity {
+    width: 1280px;
+}
+} */
+@media only screen and (min-width:320px) and (max-width:323px){
+    .dash_board_chat {
+        /* right: 285px; */
+        right: 306px !important;
+    }
+    .dashboard_row.active .dashboard_right{
+        /* right: -285px; */
+        right: -346px !important;
+    }
+    .chat_toggle.dash_board_chat.dash_active{right: 0px !important;}
+}
+@media only screen and (min-width:324px) and (max-width:340px){
+    .dash_board_chat {
+        /* right: 285px; */
+        right: 316px !important;
+    }
+    .dashboard_row.active .dashboard_right{
+        /* right: -285px; */
+        right: -337px !important;
+    }
+    .chat_toggle.dash_board_chat.dash_active{right: 0px !important;}
+}
+@media only screen and (min-width:341px) and (max-width:374px){
+    .dash_board_chat {
+        /* right: 285px; */
+        right: 335px !important;
+    }
+    .dashboard_row.active .dashboard_right{
+        /* right: -285px; */
+        right: -337px !important;
+    }
+    .chat_toggle.dash_board_chat.dash_active{right: 0px !important;}
+}
+
+   
+@media only screen and (min-width:320px) and (max-width:767px){
+    .dashbord-message-left:has(.accor_arrow_right.active_arrow) {
+        transform: translateX(-80px);
+        width: calc( 100% + 80px );
+    }
+    .my_project{padding: 14px clamp(10px,4vw,48px) !important;}
+    .dashboard_logo img {
+        object-fit: contain;
+    }
+    .dashboard_logo {
+        width: 39px;
+        height: 60px;
+      
+    }
+    .folder {
+        margin-right: 2px;
+    }
+
+    
+
+
+    .deisgn_entity_content {
+        flex: 1 1 200px;
+    }
+    
+    .cancel_sub_btn {
+        width: 100%;
+    }
+    
+    .choose_type_date {
+        padding-left: 44px;
+        width: calc( 100% - 74px);
+    }
+    
+    .cancel_wrapper {
+        margin-bottom: 20px;
+    }
+    
+    .user_name_input {
+        width: calc( 50% - 70px ) !important;
+    }
+    
+    .choose_type_date > input {
+        width:  50%  !important;
+    }
+    
+    .cancel_wrapper {
+        width: 74px;
+        margin-right: 0;
+        justify-content: center;
+   
+    }
+    .user_detail_wrapper, .click_req, .design_entity{
+        min-width: unset;
+    }
+}
+@media screen and (max-width:425px){
+.dashboard_right {
+    /* width: 300px;
+    max-width: 300px; */
+    width: 375px;
+    max-width: 100%;
+}
+.dash_board_chat {
+    /* right: 285px; */
+    right: 365px;
+}
+.dashboard_row.active .dashboard_right{
+    /* right: -285px; */
+    right: -365px;
+}
+
+
+.choose_type_date > *{
+    width: 100% !important;
+}
+.user_detail_wrapper{
+    padding: 10px 5px;
+}
+.user_det_img{
+    margin-right: 10px;
+}
+.choose_type_date > input{
+    width: 100% !important;
+}
+.choose_type_date {
+    flex-wrap: wrap;
+}
+
+.user_name_input {
+    width: calc( 100% - 122px) !important;
+}
+.choose_type_date{
+    padding-left: 32px;
+}
+
+.uner_detail_inner {
+    justify-content: unset;
+}
+
+.user_det_img ~ .user_name_input + .user_name_input {
+    padding-left: 34px;
+    width: calc( 100% - 89px) !important
+}
+
+}
+
+/* @media only screen and (min-width:1950px) and (max-width:2500px){
+    .project_lst_wrapper .row > div {
+         width: 25%;
+    }
+    .project_lst_wrapper .row > div {
+        width: 25%;
+    }
+} */
+
+@media only screen and (min-width:1950px){
+    .project_lst_wrapper .row > div {
+         width: 25%;
+    }
+    .project_lst_wrapper .row > div {
+        width: 25%;
+    }
+    .grid-view.show .row > div {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:340px){
+    .entity_list .select_section{ gap:4px;}
+    .chat-head-tlt{font-size:17px;}
+}
+
+@media only screen and (min-width:320px) and (max-width:767px){
+    .dataTables_wrapper .bottom{flex-direction: column;}
+    div#example_paginate {
+        float: left;
+        width: 100%;
+        margin-top: 8px;
+    }
+    div#example_length {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:871px){
+
+.my_project {
+    padding: 28px 40px;
+    padding: 10px clamp(14px,4vw,51px) !important;
+
+}
+.my_project_wrapper {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+
+
+@media only screen and (min-width:320px) and (max-width:479px){
+.my_project {
+    padding: 9px clamp(10px,4vw,48px) !important;
+}
+.my_project_wrapper {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+
+
+@media only screen and (min-width:320px) and (max-width:522px){
+.dashboard_right{ top:170px;}
+.left_content_section{ padding-top: 80px;}
+}
+
+@media only screen and (min-width:320px) and (max-width:368px){
+.dashboard_tab .nav-item .nav-link{font-size: 13px;}
+}
+@media only screen and (min-width:768px) and (max-width:878px){
+.header_wrapper .my_project{padding:10px clamp(14px,1vw,31px) !important;}
+}
+
+
+
+@media only screen and (min-width:320px) and (max-width:840px){
+.createproject_section .row > div {
+    width: 100%;
+}
+.createproject_section label{padding-bottom:12px !important;}
+.createproject_section .business_tlt{margin-bottom:20px !important;}
+}
+
+@media only screen and (min-width:320px) and (max-width:479px){
+    .createproject_section{padding: 20px 10px;}
+    .project_detail_Frm .sectionHeader{flex-wrap: wrap;}
+    .project_detail_Frm .name-section{width: 100% !important;}
+    .project_detail_Frm .sectionHeader{justify-content: center;}
+}
+
+@media only screen and (min-width:320px) and (max-width:533px){
+.circle_app h3{margin-bottom: 20px;}
+.circle_app{justify-content: center;}
+}
+@media only screen and (min-width:320px) and (max-width:520px){
+.breadcrumbs .pharmacy_backarrow{margin-top:45px;}
+}
+
+@media only screen and (min-width:850px) and (max-width:1106px){
+.dashboard_currentproject {
+    margin-top: 100px;
+}
+}
+@media only screen and (min-width:769px) and (max-width:849px){
+    .dashboard_currentproject {
+        margin-top: 124px;
+    }
+    }
+
+@media only screen and (min-width:320px) and (max-width:768px){
+ .dashboard_currentproject .breadcrumbs_table{top:132px;}
+.dashboard_currentproject{ margin-top:130px;}
+}
+@media only screen and (min-width:320px) and (max-width:1104px){
+.pharmacy_backarrow.current_lst ul li{border-right: 0px;}
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+.breadcrumbs_table{top:128px;}
+}
+@media only screen and (min-width:320px) and (max-width:520px){
+    .dashboard_table {
+        margin-top: 97px;
+    }
+    }

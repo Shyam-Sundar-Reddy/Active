@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Drag and Drop with Voice Command</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .draggable, #Entity { border: 2px solid black; }
+      
+        .draggable {
+            width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0;
+        }
+        .dragging {
+            border-color: black;
+        }
+        #Entity {
+            width: 300px; height: 300px; padding: 0.5em; float: left; margin: 10px;
+        }
+        #draggable-container {
+            float: left;
+        }
+        /* Style for the microphone button */
+        .microphone-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .glow {
+    box-shadow: 0 0 10px blue;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+    </style>
+</head>
+<body>
+   
+<div id="recognizedText">Recognized Text will appear here</div>
+<div id="fallbackInput" style="display: none;">
+    <input type="text" id="commandInput" placeholder="Type your command here">
+    <button id="submitCommandBtn">Submit</button>
+</div>
+
+<div id="draggable-container">
+    <div class="control">
+        <h3>control</h3>
+    <div class="mobile draggable ui-widget-content">
+        <p>Mobile</p>
+    </div>
+    <div class="single draggable ui-widget-content">
+        <p>Single</p>
+    </div>
+    <div class="multi draggable ui-widget-content">
+        <p>Multi</p>
+    </div>
+    <div class="email draggable ui-widget-content">
+        <p>Email</p>
+    </div>
+    <div class="Big Text draggable ui-widget-content">
+        <p>big Text</p>
+    </div>
+    <div class="Rich Text draggable ui-widget-content">
+        <p>Rich Text</p>
+    </div>
+</div>
+ 
+<div id="Entity" class="ui-widget-header">
+    <h3>Entity</h3>
+    <p>Drop Entity</p>
+</div>
+ 
+<button id="toggleRecognitionBtn">Toggle Recognition</button>
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+$(function() {
+    $(".draggable").draggable({
+        revert: "invalid",
+        start: function(event, ui) {
+            $(this).addClass("dragging");
+        },
+        stop: function(event, ui) {
+            $(this).removeClass("dragging");
+        }
+    });
+
+    $("#Entity").droppable({
+        drop: function(event, ui) {
+            $(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+        }
+    });
+
+    var recognition;
+    var isRecognitionActive = false;
+  
+    const controlles = {
+        1: 'Mobile',
+        2: 'Single',
+        3: 'Multi',
+        4:'Email',
+        5:'Big Text',
+        6:'Rich Text',
+    }
+ 
+    function toggleRecognition() {
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+        if (SpeechRecognition !== null) {
+            if (!isRecognitionActive) {
+                recognition = new SpeechRecognition();
+                recognition.continuous = true;
+                recognition.interimResults = true;
+ 
+                recognition.onresult = function(event) {
+                    var lastResult = event.results[event.results.length - 1];
+                    if (lastResult.isFinal) {
+                        var command = lastResult[0].transcript.trim().toLowerCase();
+                        $("#recognizedText").html("Recognized Command: " + command);
+ 
+                        if (command === "next") {
+                            navigateToNextDiv();
+                        } else if (command === "previous") {
+                            navigateToPreviousDiv();
+                        } else {
+                            processCommand(command);
+                        }
+                    }
+                };
+ 
+                recognition.onerror = function(event) {
+                    console.error("Speech Recognition Error: ", event.error);
+                };
+ 
+                recognition.start();
+                isRecognitionActive = true;
+                $("#toggleRecognitionBtn").text("Stop Recognition");
+            } else {
+                recognition.abort();
+                isRecognitionActive = false;
+                $("#toggleRecognitionBtn").text("Start Recognition");
+            }
+        } else {
+            $("#recognizedText").html("Speech Recognition is not supported in this browser.");
+        }
+    }
+    
+    function processCommand(command) {
+    // Remove glow effect from all elements
+    $(".draggable, #Entity").removeClass('glow');
+
+    if (command === "focus control") {
+        // Apply glow effect to all controls
+        $(".draggable").addClass('glow');
+    } else if (command === "focus entity") {
+        // Apply glow effect only to the Entity div
+        $("#Entity").addClass('glow');
+    } else if (command.startsWith("bloom ")) {
+        // Check if the entity is focused
+        if ($("#Entity").hasClass('glow')) {
+            // Extract the class name to bloom
+            var classNameToBloom = command.split(" ")[1];
+            // Apply glow effect to the specified class within the entity
+            $("#Entity ." + classNameToBloom).addClass('glow');
+        }
+    } else {
+        // Existing logic for other commands
+        var foundControllers = [];
+
+        for (var key in controlles) {
+            if (command.includes(controlles[key].toLowerCase())) {
+                foundControllers.push(controlles[key]);
+            }
+        }
+
+        if (foundControllers.length > 0) {
+            foundControllers.forEach(function(controller) {
+                var $draggable = $(".draggable").filter(function() {
+                    return $(this).text().trim().toLowerCase() === controller.toLowerCase();
+                });
+
+                if ($draggable.length > 0) {
+                    var clone = $draggable.first().clone();
+                    // Add the microphone button to the clone
+                    var DisplayNameLabel = $('<label for="dname"><button class="in_controls microphone-btn"><i class="fa fa-microphone"></i></button>Display name:</label>');
+                    var DisplayNameInput = $('<input type="text" id="dname" name="dname">');
+                    clone.append(DisplayNameLabel, DisplayNameInput);
+                    clone.appendTo("#Entity").fadeIn();
+
+                    // Remove glow effect from the cloned control
+                    clone.removeClass('glow');
+                }
+            });
+        }
+    }
+}
+
+    $("#toggleRecognitionBtn").click(function() {
+        toggleRecognition();
+    });
+ 
+    $("#submitCommandBtn").click(function() {
+        var command = $("#commandInput").val().trim().toLowerCase();
+        $("#recognizedText").html("Recognized Command: " + command);
+        processCommand(command);
+    });
+});
+</script>
+ 
+</body>
+</html>

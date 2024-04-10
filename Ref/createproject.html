@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahat</title>
+
+  <!-- css links  -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900" rel="stylesheet" type="text/css"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap"
+    rel="stylesheet">
+  <!-- bootstrap link  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/selectize.css">
+  <!-- font awesome link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+</head>
+
+<body class="mahat-wrapper">
+
+  <!-- header  -->
+  <header>
+    <div class="header_wrapper custom-container">
+      <div class="dashboard_logo">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="my_project_wrapper">
+        <a class="my_project active">
+          <div class="folder"><img src="./images/user_h.png" alt="project"></div>
+          <p class="font-15">My Project</p>
+        </a>
+        <a class="my_project ">
+          <div class="folder"><img src="./images/star.png" alt="current"></div>
+          <p class="font-15">Current Project</p>
+        </a>
+
+        <div class="dropdown my_project">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuSetting"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="folder"><img src="./images/set.png" alt="dropdownMenuSetting"></div>
+            <p class="font-15">Settings</p>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuSetting">
+            <li><a class="dropdown-item" href="#"><img src="./images/tech_blk.png" alt="dropdownMenuSetting">Tech
+                Settings</a></li>
+            <li><a class="dropdown-item" href="#"><img src="./images/ux_blk.png" alt="dropdownMenuSetting">UX
+                Settings</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="user_login_wrapper">
+        <p class="user_name font-16">John Doe</p>
+        <div class="user_logo"><img src="./images/userlogo.png" alt="userlogo"></div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- body section  -->
+  <section>
+    <div class="dashboard_wrapper custom-container">
+      <div class=" dashboard_row">
+        <div class="dashboard_left">
+          <div class="left_section">
+            <!-- <div class="left_head_section">
+                        <h1 class="font-24">Welcome Sandbox41!</h1>
+                        <ul>
+                          <li class="active"><a href="#">Inception</a></li>
+                          <li><a href="#">Build</a></li>
+                          <li><a href="#">Transition</a></li>
+                          <li><a href="#">Projects</a></li>
+                        </ul>
+                      </div> -->
+            <div class="left_content_section createproject_wrapper">
+              <div class="overview_section">
+                <!-- <h3 class="font-20">Overview</h3> -->
+              
+
+                <div class="createproject_section">
+                  <div class="row">
+                      <div class="col-sm-12">
+                             <h1>Create the Project with the Help of Mahat AI</h1>
+                             <p>Get started with new modern AI that help you to create new projects</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                      <label>Industry</label>
+                      <div class="business_tlt">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 22H22" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 2H7C4 2 3 3.79 3 6V22H21V6C21 3.79 20 2 17 2Z" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 16.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 16.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 12H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 12H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 7.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 7.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <input type="text" class="form-control purpose_of_project font-15" id="tags" placeholder="Choose your industry ">
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                      <label>Provide Industry Sub Domain or Additional Context</label>
+                      <div class="business_tlt">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 22H22" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 2H7C4 2 3 3.79 3 6V22H21V6C21 3.79 20 2 17 2Z" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 16.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 16.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 12H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 12H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 7.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 7.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <input type="text" class="form-control purpose_of_project font-15" id="tags" placeholder="Refine AI suggestions ">
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="business_detail">
+                        <label>What are the involved Business Functions ?</label>
+                        <div class="business_tlt">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_171_2979)">
+                              <mask id="mask0_171_2979" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <path d="M0 1.90735e-06H24V24H0V1.90735e-06Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_171_2979)">
+                                <path d="M8.87466 3.73683L10.1473 0.937502H13.8525L15.1252 3.73683L17.5934 5.16188L20.654 4.86436L22.5066 8.07319L20.7187 10.575V13.4251L22.5066 15.9269L20.654 19.1357L17.5934 18.8381L15.1252 20.2632L13.8525 23.0625H10.1473L8.87466 20.2632L6.40641 18.8381L3.3458 19.1357L1.49316 15.9269L3.28116 13.4251V10.575L1.49316 8.07319L3.3458 4.86436L6.40641 5.16188L8.87466 3.73683Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6875 10.1563C15.6875 12.1928 14.0365 13.8438 12 13.8438C9.96348 13.8438 8.3125 12.1928 8.3125 10.1563C8.3125 8.11975 9.96348 6.46877 12 6.46877C14.0365 6.46877 15.6875 8.11975 15.6875 10.1563Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.49023 18.8864C6.73909 16.062 9.11083 13.8469 11.9999 13.8469C14.8891 13.8469 17.2608 16.062 17.5096 18.8865" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_171_2979">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <select id="select-all-checkbox" multiple>
+                            <option value="select_all">Select All</option>
+                            <option value="Sales" selected>Sales</option>
+                            <option value="Procurement">Procurement</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Inventory">Inventory</option>
+                            <option value="ServiceDelivery">Service Delivery</option>
+                            <option value="Support">Support</option>
+                            <option value="Production">Production</option>
+                            <option value="HumanResources">Human Resources</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Legal">Legal</option>
+                            <option value="InformationTechnology">Information Technology</option>
+                            <option value="ResearchandDevelopment">Research and Development</option>
+                            <option value="FacilityManagement">Facility Management</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Purchase">Purchase</option>
+                            <option value="Sourcing">Sourcing</option>
+                            <option value="VendorManagement">Vendor Management</option>
+                            <!-- Add more options here -->
+                        </select>
+                        </div>
+
+                        <!-- <div class="business_tlt top_suggestion">
+                          <img src="./images/question.png"/>
+                           <h1>Top Suggestions for E-Business</h1>
+                        </div> -->
+                   
+                  
+                     
+
+                       
+                      
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="business_detail">
+                        <label>What are the key Business Workflows?</label>
+                        <div class="business_tlt">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_171_2979)">
+                              <mask id="mask0_171_2979" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <path d="M0 1.90735e-06H24V24H0V1.90735e-06Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_171_2979)">
+                                <path d="M8.87466 3.73683L10.1473 0.937502H13.8525L15.1252 3.73683L17.5934 5.16188L20.654 4.86436L22.5066 8.07319L20.7187 10.575V13.4251L22.5066 15.9269L20.654 19.1357L17.5934 18.8381L15.1252 20.2632L13.8525 23.0625H10.1473L8.87466 20.2632L6.40641 18.8381L3.3458 19.1357L1.49316 15.9269L3.28116 13.4251V10.575L1.49316 8.07319L3.3458 4.86436L6.40641 5.16188L8.87466 3.73683Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6875 10.1563C15.6875 12.1928 14.0365 13.8438 12 13.8438C9.96348 13.8438 8.3125 12.1928 8.3125 10.1563C8.3125 8.11975 9.96348 6.46877 12 6.46877C14.0365 6.46877 15.6875 8.11975 15.6875 10.1563Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.49023 18.8864C6.73909 16.062 9.11083 13.8469 11.9999 13.8469C14.8891 13.8469 17.2608 16.062 17.5096 18.8865" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_171_2979">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <select id="select-all-business" multiple>
+                            <option value="select_all">Select All</option>
+                            <option value="Sales" selected>Sales</option>
+                            <option value="Procurement">Procurement</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Inventory">Inventory</option>
+                            <option value="ServiceDelivery">Service Delivery</option>
+                            <option value="Support">Support</option>
+                            <option value="Production">Production</option>
+                            <option value="HumanResources">Human Resources</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Legal">Legal</option>
+                            <option value="InformationTechnology">Information Technology</option>
+                            <option value="ResearchandDevelopment">Research and Development</option>
+                            <option value="FacilityManagement">Facility Management</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Purchase">Purchase</option>
+                            <option value="Sourcing">Sourcing</option>
+                            <option value="VendorManagement">Vendor Management</option>
+                            <!-- Add more options here -->
+                        </select>
+                        </div>
+
+                        <!-- <div class="business_tlt top_suggestion">
+                          <img src="./images/question.png"/>
+                           <h1>Top Suggestions for E-Business</h1>
+                        </div> -->
+                   
+                  
+                     
+
+                       
+                      
+                        </div>
+                    </div>
+                    
+                 </div>
+                 <div class="row">
+                    <div class="project_detail_Frm">
+                      <form>
+                         <h2>Setup Your Project Details</h2>
+                         <div class="row">
+                         <div class="col-sm-6">
+                          <div class="mb-3">
+                            <label for="name" class="form-label">Project Name</label>
+                            
+                            <div class="business_tlt">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 13H12" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 17H16" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                      <input type="text" placeholder="Sample Project" autofocus="true" class="form-control" id="name">
+                      </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="industrys" class="form-label">Industry</label>
+                          
+                      <div class="business_tlt">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M2 22H22" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M17 2H7C4 2 3 3.79 3 6V22H21V6C21 3.79 20 2 17 2Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7 16.5H10" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 16.5H17" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7 12H10" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 12H17" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7 7.5H10" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 7.5H17" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      <input type="text" class="form-control font-15" id="industrys" placeholder="Enter Your Industries">
+                      </div>
+                          </div>
+                         </div>
+                         <div class="col-sm-6">
+                          <div class="mb-3">
+                            <label for="name" class="form-label">Upload Logo </label>
+                            <div class="sectionHeader">
+                              <div class="img-section">
+                                  <img class="img" src="images/upload.png" alt="Logo" />
+                              </div>
+                            <div class="name-section">  <label for="buttonSection"><span class="filepath"></span><span class="uploadpart">Drop your file here or <span>Select a File</span> only JPEG, PNG are allowed up to 3mb in size</span></label></div>
+                              <input id="buttonSection" class="input" type="file" accept="image/*">
+                          </div>
+                          </div>
+                         </div>
+                         </div>
+                         <h2>Parties</h2>
+                         <div class="row">
+                           <div class="col-sm-4">
+                          <div class="mb-3 parties_frm">
+                            <label for="PlatformName" class="form-label">Platform Operator Name</label>
+                          
+                            <div class="business_tlt">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <input type="text" placeholder="Enter Name" class="form-control" id="PlatformName">
+                              </div>
+                          </div>
+                          </div>
+                          <div class="col-sm-4">
+                          <div class="mb-3 parties_frm">
+                            <label for="Provider" class="form-label">Provider Name</label>
+                            <div class="business_tlt">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <input type="text" placeholder="Enter Name" class="form-control" id="Provider">
+                              </div>
+                          </div> 
+                          </div>
+                          <div class="col-sm-4">
+                          <div class="mb-3 parties_frm">
+                            <label for="Consumer" class="form-label">Consumer Name</label>
+                            <div class="business_tlt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <input type="text" placeholder="Enter Name" class="form-control" id="Consumer">
+                            </div>
+                          </div>
+                          </div>
+                         </div>
+                       
+                      </form>
+                      <div class="create_btns">
+                        <button type="button" class="back_btn">Back</button>
+                        <button type="button" class="create_btn">Create</button>
+                     </div>
+                    </div>
+                 </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="dashboard_right">
+
+          <div class="loader"><img src="./images/loder.gif" /></div>
+          <div class="AIChat">
+            <div class="chat-head-tlt"><img src="./images/mahat_right_logo.png"/>Mahat <span>Artificial Intelligence</span></div>
+            <div class="art_intel_common">
+            <div class="art_intel_sec">
+              <div class="art_intel">
+                <div class="art_intel_top">
+                  <div class="art_intel_top_img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                      <g clip-path="url(#clip0_272_7457)">
+                        <path d="M46.6667 35.8333V44.9999C46.6667 46.8408 45.1742 48.3333 43.3333 48.3333H32.5V44.9999H42.5C42.96 44.9999 43.3333 44.6266 43.3333 44.1666V35.8333H46.6667Z" fill="#BCC7CE"/>
+                        <path d="M6.66634 24.9999V17.4999C6.66634 10.1483 12.648 4.16659 19.9997 4.16659H29.9997C37.3513 4.16659 43.333 10.1483 43.333 17.4999V24.9999H46.6663V17.4999C46.6663 8.29492 39.2047 0.833252 29.9997 0.833252H19.9997C10.7947 0.833252 3.33301 8.29492 3.33301 17.4999V24.9999H6.66634Z" fill="#BCC7CE"/>
+                        <path d="M10 20.5666V14.9999C10 14.0833 10.75 13.3333 11.6667 13.3333C12.125 13.3333 12.5417 13.5166 12.8417 13.8249C13.15 14.1249 13.3333 14.5416 13.3333 14.9999V18.3333L10 20.5666Z" fill="#BCC7CE"/>
+                        <path d="M36.666 19.1666V14.9999C36.666 14.5416 36.8493 14.1249 37.1577 13.8249C37.4577 13.5166 37.8743 13.3333 38.3327 13.3333C39.2493 13.3333 39.9993 14.0833 39.9993 14.9999V20.5666L36.666 19.1666Z" fill="#BCC7CE"/>
+                        <path d="M35.8337 40.8334H14.167C10.9453 40.8334 8.33366 38.2217 8.33366 35.0001H6.66699V25.8334H8.33366C8.33366 20.7709 12.4378 16.6667 17.5003 16.6667H32.5003C37.5628 16.6667 41.667 20.7709 41.667 25.8334H43.3337V35.0001H41.667C41.667 38.2217 39.0553 40.8334 35.8337 40.8334Z" fill="#DCE4EA"/>
+                        <path d="M38.3337 28.0558V34.1666C38.3337 36.0074 36.8412 37.4999 35.0003 37.4999H15.0003C13.1595 37.4999 11.667 36.0074 11.667 34.1666V28.0558C11.667 24.6933 13.7945 21.8333 16.7778 20.7458C18.017 20.2941 19.3895 20.5766 20.472 21.3316C21.2945 21.9058 22.702 22.4999 25.0003 22.4999C27.2987 22.4999 28.7062 21.9058 29.5287 21.3316C30.6103 20.5766 31.9828 20.2941 33.2228 20.7458C36.207 21.8324 38.3337 24.6924 38.3337 28.0558Z" fill="#0A365E"/>
+                        <path d="M17.9163 31.6667C19.0669 31.6667 19.9997 30.5475 19.9997 29.1667C19.9997 27.786 19.0669 26.6667 17.9163 26.6667C16.7657 26.6667 15.833 27.786 15.833 29.1667C15.833 30.5475 16.7657 31.6667 17.9163 31.6667Z" fill="#10DDFF"/>
+                        <path d="M32.0833 31.6667C33.2339 31.6667 34.1667 30.5475 34.1667 29.1667C34.1667 27.786 33.2339 26.6667 32.0833 26.6667C30.9327 26.6667 30 27.786 30 29.1667C30 30.5475 30.9327 31.6667 32.0833 31.6667Z" fill="#10DDFF"/>
+                        <path d="M3.33301 23.3333H6.66634C7.58634 23.3333 8.33301 24.0799 8.33301 24.9999V35.8333C8.33301 36.7533 7.58634 37.4999 6.66634 37.4999H3.33301C1.95301 37.4999 0.833008 36.3799 0.833008 34.9999V25.8333C0.833008 24.4533 1.95301 23.3333 3.33301 23.3333Z" fill="#2473FE"/>
+                        <path d="M46.667 37.5H43.3337C42.4137 37.5 41.667 36.7533 41.667 35.8333V25C41.667 24.08 42.4137 23.3333 43.3337 23.3333H46.667C48.047 23.3333 49.167 24.4533 49.167 25.8333V35C49.167 36.38 48.047 37.5 46.667 37.5Z" fill="#2473FE"/>
+                        <path d="M26.667 44.1667H33.3337C33.7937 44.1667 34.167 44.5401 34.167 45.0001V48.3334C34.167 48.7934 33.7937 49.1667 33.3337 49.1667H26.667C25.287 49.1667 24.167 48.0467 24.167 46.6667C24.167 45.2867 25.287 44.1667 26.667 44.1667Z" fill="#0A365E"/>
+                        <path d="M25.0005 34.1667C23.7713 34.1667 22.9388 33.4101 22.6405 32.9626C22.3846 32.5801 22.488 32.0626 22.8713 31.8067C23.2521 31.5509 23.7721 31.6542 24.0271 32.0376C24.033 32.0451 24.368 32.5001 25.0005 32.5001C25.6371 32.5001 25.9705 32.0417 25.9738 32.0376C26.2288 31.6542 26.7471 31.5509 27.1296 31.8067C27.513 32.0626 27.6163 32.5801 27.3605 32.9626C27.0621 33.4101 26.2296 34.1667 25.0005 34.1667Z" fill="#10DDFF"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_272_7457">
+                          <rect width="50" height="50" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <h3 class="font-20">Start a Coversation!</h3>
+                  <p class="font-16">To get started, choose a chat from the list on the
+                    left or initiate a new one</p>
+                </div>
+                <div class="art_intel_bottom">
+                  <div class="art_intel_bottom_head">
+                    <p class="font-16">Here Some Recommendation based on your interest</p>
+                  </div>
+                  <div class="art_intel_bottom_list">
+                    <ul>
+                      <li class="art_intel_lists">
+                        <a class="suggestedlogo">
+                          <div class="art_intel_text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <mask id="mask0_325_2923" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
+                                <path d="M1 0.999998H23V23H1V0.999998Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_325_2923)">
+                                <path d="M13.9336 22.3555H10.0664V19.7773H13.9336V22.3555Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <path d="M10.0664 19.7773L7.48828 15.8672L12 6.80078L16.5117 15.8672L13.9336 19.7773" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <mask id="mask1_325_2923" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
+                                <path d="M1 0.999998H23V23H1V0.999998Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask1_325_2923)">
+                                <path d="M2.93359 4.22266C2.22169 4.22266 1.64453 3.64554 1.64453 2.93359C1.64453 2.22169 2.22169 1.64453 2.93359 1.64453C3.6455 1.64453 4.22266 2.22164 4.22266 2.93359C4.22266 3.6455 3.6455 4.22266 2.93359 4.22266Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.2891 4.22266H10.7109V1.64453H13.2891V4.22266Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.0664 4.22266C20.3545 4.22266 19.7773 3.64554 19.7773 2.93359C19.7773 2.22169 20.3545 1.64453 21.0664 1.64453C21.7783 1.64453 22.3555 2.22164 22.3555 2.93359C22.3555 3.6455 21.7783 4.22266 21.0664 4.22266Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 6.80078V15.8672" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.22266 2.93359H10.7109" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.2891 2.93359H19.7773" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.93359 11.957C2.93359 7.41119 6.33805 3.65048 10.7109 3.02499" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.2891 3.02499C17.6619 3.65048 21.0664 7.41119 21.0664 11.957" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </svg>
+                            <p>Suggested logo</p>
+                          </div>
+                          <div class="art_intel_arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                              fill="none">
+                              <path d="M10.8225 4.44751L15.375 9.00001L10.8225 13.5525" stroke="#5B5C5C"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.625 9H15.2475" stroke="#5B5C5C" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+                        </a>
+                     
+                      </li>
+                      <li class="art_intel_lists"><a href="#" class="suggestedstakeholder">
+                          <div class="art_intel_text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <mask id="mask0_325_2922" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+                                <path d="M2 2H22V22H2V2Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_325_2922)">
+                                <path d="M14.7734 11.9609C14.7734 13.4711 13.5492 14.6953 12.0391 14.6953C10.5289 14.6953 9.30469 13.4711 9.30469 11.9609C9.30469 10.4508 10.5289 9.22656 12.0391 9.22656C13.5492 9.22656 14.7734 10.4508 14.7734 11.9609Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.9052 17.1101C18.6579 17.5342 19.6132 17.2702 20.039 16.5204C20.4648 15.7705 20.1997 14.8188 19.447 14.3947L19.3987 14.3673C18.8849 14.0755 18.5952 13.5012 18.6754 12.9157C18.7169 12.6131 18.7383 12.3042 18.7383 11.9903C18.7383 11.6595 18.7144 11.3343 18.6684 11.0163C18.5834 10.4294 18.8754 9.85174 19.3911 9.55889L19.447 9.52713C20.1997 9.10303 20.4648 8.15135 20.039 7.4015C19.6132 6.6517 18.6579 6.38768 17.9052 6.81178L17.8366 6.85068C17.315 7.14693 16.6688 7.08717 16.2004 6.71221C15.6846 6.29928 15.107 5.96041 14.4836 5.71166C13.9289 5.49033 13.5625 4.95666 13.5625 4.35943V4.34377C13.5625 3.4808 12.8629 2.78127 12 2.78127C11.1371 2.78127 10.4375 3.4808 10.4375 4.34377C10.4375 4.94373 10.0678 5.47924 9.50941 5.69873C8.87894 5.94654 8.2948 6.28646 7.7734 6.70182C7.30523 7.07482 6.66019 7.13287 6.13968 6.83725L6.09488 6.81178C5.34215 6.38768 4.38679 6.6517 3.96101 7.4015C3.53523 8.15135 3.80031 9.10303 4.55304 9.52713L4.56558 9.53428C5.08621 9.82998 5.38078 10.4135 5.2941 11.0059C5.24707 11.3272 5.22265 11.6559 5.22265 11.9903C5.22265 12.3105 5.245 12.6256 5.28816 12.934C5.37019 13.5201 5.07965 14.0956 4.56508 14.3879L4.55304 14.3947C3.80031 14.8188 3.53523 15.7705 3.96101 16.5204C4.38679 17.2702 5.34211 17.5342 6.09484 17.1101" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.74219 21.2188C7.74219 19.0296 9.51895 17.2344 11.7107 17.2344H12.4456C14.6373 17.2344 16.4141 19.0296 16.4141 21.2188" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </svg>
+                            <p>Suggested Stakeholder</p>
+                          </div>
+                          <div class="art_intel_arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                              fill="none">
+                              <path d="M10.8225 4.44751L15.375 9.00001L10.8225 13.5525" stroke="#5B5C5C"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.625 9H15.2475" stroke="#5B5C5C" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="art_intel_lists"><a href="#" class="businessfunction">
+                          <div class="art_intel_text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <mask id="mask0_325_2921" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
+                                <path d="M1 0.999996H23V23H1V0.999996Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_325_2921)">
+                                <path d="M19.3048 9.93488C19.3048 11.1258 19.3048 11.0979 19.3048 11.0979L20.9501 14.3886C20.9984 14.4852 21.0235 14.5916 21.0235 14.6996C21.0235 15.0835 20.7123 15.3948 20.3282 15.3948H18.4454V18.4023C18.4454 19.1142 17.8682 19.6914 17.1563 19.6914H14.5782V22.3555H5.98446V16.2542C4.07544 14.6185 2.97665 12.2302 2.97656 9.71634V9.68424C2.97639 5.24389 6.57614 1.64423 11.0164 1.64453H11.0165C15.5942 1.64483 19.3049 5.35716 19.3048 9.93488Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.0945 11.1406C10.1452 11.1406 9.37576 10.3711 9.37576 9.42187C9.37576 8.47261 10.1452 7.70312 11.0945 7.70312C12.0437 7.70312 12.8133 8.47261 12.8133 9.42187C12.8133 10.3711 12.0437 11.1406 11.0945 11.1406ZM15.3914 9.42187C15.3914 9.10141 15.3536 8.79023 15.2871 8.48979L16.2045 7.96012L14.9154 5.72738L13.9954 6.25856C13.5374 5.83836 12.9911 5.51322 12.3836 5.32231V4.26562H9.80545V5.32231C9.19787 5.51322 8.65161 5.83836 8.19361 6.25856L7.27356 5.72738L5.9845 7.96012L6.90192 8.48979C6.83541 8.79023 6.79764 9.10141 6.79764 9.42187C6.79764 9.74233 6.83541 10.0535 6.90192 10.354L5.9845 10.8836L7.27356 13.1164L8.19361 12.5851C8.65161 13.0053 9.19787 13.3306 9.80545 13.5214V14.5781H12.3836V13.5214C12.9911 13.3306 13.5374 13.0053 13.9954 12.5851L14.9154 13.1164L16.2045 10.8836L15.2871 10.354C15.3536 10.0535 15.3914 9.74233 15.3914 9.42187Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </svg>
+                            <p>Suggested Business Function</p>
+                          </div>
+                          <div class="art_intel_arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                              fill="none">
+                              <path d="M10.8225 4.44751L15.375 9.00001L10.8225 13.5525" stroke="#5B5C5C"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.625 9H15.2475" stroke="#5B5C5C" stroke-width="1.5" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sent_message">
+              <input type="text" placeholder="Type here...">
+              <button><img src="./images/send.png"></button>
+            </div>
+            </div>
+            <!--suggested_logo_content-->
+            <div class="suggested_logo_content">
+              <div class="current_project_detail_view">
+                <nav>
+                  <div class="nav nav-tabs mb-3" id="nav-tab-myproject" role="tablist">
+                    <button class="nav-link active" id="nav-Suggestive-tab" data-bs-toggle="tab" data-bs-target="#nav-Suggestive"
+                     type="button" role="tab" aria-controls="nav-Suggestive" aria-selected="true">Suggestive </button>
+                    <button class="nav-link" id="nav-selfservice-tab" data-bs-toggle="tab" data-bs-target="#nav-selfservice" 
+                    type="button" role="tab" aria-controls="nav-selfservice" aria-selected="false">Self Service</button>
+                    <button class="nav-link" id="nav-Augmented-tab" data-bs-toggle="tab" data-bs-target="#nav-Augmented"
+                     type="button" role="tab" aria-controls="nav-Augmented" aria-selected="false">Augmented</button>
+                
+                  </div>
+                </nav>
+              </div>
+              <div class="art_intel_sec ">
+  
+                  
+                  <div class="art_intel_top">
+                    <div class="tab-content p-3 border bg-light" id="nav-tabContent-myproject">  
+                      <div class="tab-pane fade active show" id="nav-Suggestive" role="tabpanel" aria-labelledby="nav-Suggestive">
+                        <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                          Logo suggested</h4>
+                         
+                         <div class="logo-suggested_ico">
+                             <ul>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list1.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list2.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list3.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list4.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list5.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list6.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list7.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list2.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list1.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list5.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list3.png"/></a></li>
+                               <li><a href="#"><img src="./images/suggested_logo/ico_list4.png"/></a></li>
+                             </ul>
+                         </div> 
+                         <div class="suggested_button">
+                               <div class="like-btn">
+                                   <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                   </a>
+                                   <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                   </a>
+                               </div>
+                               <div class="discard-apply">
+                                 <a href="#" class="discard">Discard</a>
+                                 <a href="#">Apply</a>
+                               </div>
+                         </div>
+                      </div>
+                      <div class="tab-pane fade" id="nav-selfservice" role="tabpanel" aria-labelledby="nav-selfservice">
+                        <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                          Self Service</h4>
+                          <form>
+                            <div class="form-group">
+                               <input type="text" class="form-control" placeholder="Provide Health Care Logo">
+                               <button type="button" class="edit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.90845 4.20825C10.2668 6.50825 12.1334 8.26659 14.4501 8.49992" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.5 18.3333H17.5" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg></button>
+                            </div>
+                            <div class="form-group form-submit-btn">
+                              <button type="submit" class="btn btn-default submit">Submit</button>
+                              <button type="button" class="cancel">Cancel</button>
+                            </div>
+                          </form>
+                          <div class="chat-subhead-tlt"><img src="./images/mahat_right_logo.png"><span>Mahat AI</span></div>
+                         <div class="logo-suggested_ico">
+                             <ul>
+                               <li><a href="#"><img src="./images/selfservice/ico_list1.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list2.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list3.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list4.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list5.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list6.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list7.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list8.png"/></a></li>
+                               <li><a href="#"><img src="./images/selfservice/ico_list9.png"/></a></li>
+                             </ul>
+                         </div> 
+                         <div class="suggested_button">
+                               <div class="like-btn">
+                                   <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                   </a>
+                                   <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                   </a>
+                               </div>
+                               <div class="discard-apply">
+                                 <a href="#" class="discard">Discard</a>
+                                 <a href="#">Apply</a>
+                               </div>
+                         </div>
+                      </div>
+                      <div class="tab-pane fade" id="nav-Augmented" role="tabpanel" aria-labelledby="nav-Augmented">
+                        <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                          Augmented</h4>
+                          <div class="chat_detail augmented_chart">
+                            <div class="send_receive">
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                      <div class="">
+                        <div class="sender_name">
+                          <span>You</span><span>10:10 AM</span>
+                        </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                      </div>
+                              </div>
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                           <div class="">
+                            <div class="sender_name">
+                              <span>You</span><span>10:10 AM</span>
+                            </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                           </div>
+                              </div>
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                              <div class="">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                              </div>
+                              </div>
+                              <div class="sendersection">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="sender">     Can you give me some detailson control set?</p>
+                              </div>
+                       
+                              <div class="sendersection">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="sender">     Can you give me some detailson control set?</p>
+                              </div>
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                              <div class="">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                              </div>
+                              </div>
+    
+                            </div>
+            
+                            <div class="sent_message">
+                              <input type="text" placeholder="Type here..." />
+                              <button><img src="./images/send.png" /></button>
+                            </div>
+            
+                          </div>
+  
+                      </div>
+                    </div>           
+                  </div>
+            
+              </div>
+            </div>
+            <!--suggestedstakeholder-->
+            <div class="suggestedstakeholder_logo_content">
+              <div class="current_project_detail_view">
+                <nav>
+                  <div class="nav nav-tabs mb-3" id="nav-tab-myproject" role="tablist">
+                    <button class="nav-link active" id="nav-Suggestivestakeholder-tab" data-bs-toggle="tab" data-bs-target="#nav-Suggestivestakeholder"
+                     type="button" role="tab" aria-controls="nav-Suggestive" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <mask id="mask0_424_8668" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                        <path d="M0 1.90735e-06H30V30H0V1.90735e-06Z" fill="white"/>
+                      </mask>
+                      <g mask="url(#mask0_424_8668)">
+                        <path d="M6.55928 14.6316C5.96068 13.3969 5.625 12.0111 5.625 10.5469C5.625 5.36918 9.8223 1.17188 15 1.17188C20.1776 1.17188 24.375 5.36918 24.375 10.5469C24.375 13.0398 23.4019 15.3054 21.815 16.9848C20.4619 18.4167 19.6875 20.2955 19.6875 22.2656C19.6875 23.56 18.6381 24.6094 17.3437 24.6094H12.6562C11.3618 24.6094 10.3125 23.56 10.3125 22.2656C10.3125 20.2955 9.53812 18.4167 8.18502 16.9848C7.53012 16.2918 6.9798 15.499 6.55928 14.6316Z" stroke="#1780DD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.8281 16.4063C13.8281 15.759 14.3528 15.2344 15 15.2344C15.6472 15.2344 16.1719 15.759 16.1719 16.4063C16.1719 17.0535 15.6472 17.5781 15 17.5781C14.3528 17.5781 13.8281 17.0535 13.8281 16.4063Z" fill="#1780DD"/>
+                        <path d="M12.6562 28.8281H17.3437" stroke="#1780DD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.6562 8.20291C12.6562 6.90852 13.7056 5.85916 15 5.85916C16.2944 5.85916 17.3437 6.90852 17.3437 8.20291C17.3437 9.10385 16.8354 9.88613 16.0898 10.2784C15.3803 10.6517 15 11.4493 15 12.251" stroke="#1780DD" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                    </svg> </button>
+                    <button class="nav-link" id="nav-selfservicestakeholder-tab" data-bs-toggle="tab" data-bs-target="#nav-selfservicestakeholder" 
+                    type="button" role="tab" aria-controls="nav-selfservice" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <mask id="mask0_424_8525" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="26" height="26">
+                        <path d="M2 2H28V28H2V2Z" fill="white"/>
+                      </mask>
+                      <g mask="url(#mask0_424_8525)">
+                        <path d="M11.6143 6.04823L12.993 3.01562H17.007L18.3857 6.04823L21.0596 7.59203L24.3753 7.26972L26.3823 10.746L24.4453 13.4562V16.5438L26.3823 19.2541L24.3753 22.7303L21.0596 22.408L18.3857 23.9518L17.007 26.9844H12.993L11.6143 23.9518L8.94036 22.408L5.6247 22.7303L3.61768 19.2541L5.55468 16.5438V13.4562L3.61768 10.746L5.6247 7.26972L8.94036 7.59203L11.6143 6.04823Z" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.9945 13.0028C18.9945 15.209 17.2059 16.9976 14.9997 16.9976C12.7934 16.9976 11.0049 15.209 11.0049 13.0028C11.0049 10.7966 12.7934 9.00799 14.9997 9.00799C17.2059 9.00799 18.9945 10.7966 18.9945 13.0028Z" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.03101 22.4604C9.3006 19.4006 11.87 17.001 14.9998 17.001C18.1297 17.001 20.6991 19.4006 20.9687 22.4604" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                    </svg></button>
+                    <button class="nav-link" id="nav-Augmentedstakeholder-tab" data-bs-toggle="tab" data-bs-target="#nav-Augmentedstakeholder"
+                     type="button" role="tab" aria-controls="nav-Augmented" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <g clip-path="url(#clip0_424_8555)">
+                        <path d="M17.6367 9.78516H26.4258" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M17.6367 6.26953H26.4258" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10"/>
+                        <mask id="mask0_424_8555" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+                          <path d="M0 1.90735e-06H30V30H0V1.90735e-06Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_424_8555)">
+                          <path d="M16.72 12.4494L15.0586 14.9414H22.0898C25.9731 14.9414 29.1211 11.7935 29.1211 7.91016C29.1211 4.02691 25.9731 0.878906 22.0898 0.878906C18.2065 0.878906 15.0586 4.02691 15.0586 7.91016C15.0586 9.64037 15.6835 11.2246 16.72 12.4494Z" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10"/>
+                          <path d="M14.9414 29.1211C14.9414 25.2379 11.7934 22.0898 7.91016 22.0898C4.02691 22.0898 0.878906 25.2379 0.878906 29.1211" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10"/>
+                          <path d="M11.4258 16.8164C11.4258 18.758 9.85178 20.332 7.91016 20.332C5.96854 20.332 4.39453 18.758 4.39453 16.8164C4.39453 14.8748 5.96854 13.3008 7.91016 13.3008C9.85178 13.3008 11.4258 14.8748 11.4258 16.8164Z" stroke="#8B8B8B" stroke-width="2" stroke-miterlimit="10"/>
+                        </g>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_424_8555">
+                          <rect width="30" height="30" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg></button>
+                  </div>
+                </nav>
+              </div>
+              <div class="art_intel_sec ">
+  
+                  
+                  <div class="art_intel_top">
+                    <div class="tab-content p-3 border bg-light" id="nav-tabContent-myproject">  
+                      <div class="tab-pane fade active show" id="nav-Suggestivestakeholder" role="tabpanel" aria-labelledby="nav-Suggestivestakeholder">
+                        <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                          Stakeholder Suggested</h4>
+                         
+                          <div class="frm-lst">
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="PlatformAdmin"> Platform Admin
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="PlatformAdmin" name="PlatformAdmin" value="PlatformAdmin">
+                                 
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="Manager"> MP Manager
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="Manager" name="Manager" value="Manager">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="officer">Liaison Officer
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="officer" name="officer" value="officer">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="admin">Client Admin
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="admin" name="admin" value="admin">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="provider">Provider Admin
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="provider" name="provider" value="provider">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="platform">Platform Client Admin
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="platform" name="platform" value="platform">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="accounts">Accounts
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="accounts" name="accounts" value="accounts">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="manning">Manning Supdt
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="manning" name="manning" value="manning">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="frm-check-list">
+                                  <label for="fleet">Fleet Manager
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                      <path d="M9.99996 18.3332C14.5833 18.3332 18.3333 14.5832 18.3333 9.99984C18.3333 5.4165 14.5833 1.6665 9.99996 1.6665C5.41663 1.6665 1.66663 5.4165 1.66663 9.99984C1.66663 14.5832 5.41663 18.3332 9.99996 18.3332Z" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.45837 9.99993L8.81671 12.3583L13.5417 7.6416" stroke="#B4B8BC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </label>
+                                  <input type="checkbox" id="fleet" name="fleet" value="fleet">
+                                </div>
+                                </div>
+                          </div>
+                         <div class="suggested_button">
+                               <div class="like-btn">
+                                   <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                   </a>
+                                   <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                   </a>
+                               </div>
+                               <div class="discard-apply">
+                                 <a href="#" class="discard">Discard</a>
+                                 <a href="#">Apply</a>
+                               </div>
+                         </div>
+                      </div>
+                      <div class="tab-pane fade" id="nav-selfservicestakeholder" role="tabpanel" aria-labelledby="nav-selfservicestakeholder">
+                        <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                          Self Service</h4>
+                          <form>
+                            <div class="form-group">
+                               <input type="text" class="form-control" placeholder="Provide Suggested Stakeholder">
+                               <button type="button" class="edit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.90845 4.20825C10.2668 6.50825 12.1334 8.26659 14.4501 8.49992" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.5 18.3333H17.5" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg></button>
+                            </div>
+                            <div class="form-group form-submit-btn">
+                              <button type="submit" class="btn btn-default submit">Submit</button>
+                              <button type="button" class="cancel">Cancel</button>
+                            </div>
+                          </form>
+                          <div class="chat-subhead-tlt"><img src="./images/mahat_right_logo.png"><span>Mahat AI</span></div>
+                          <div class="frm-lst">
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="PlatformAdmin"> Platform Admin</label>
+                              <input type="checkbox" id="Platform Admin" name="PlatformAdmin" value="PlatformAdmin">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="Manager"> MP Manager</label>
+                              <input type="checkbox" id="Manager" name="Manager" value="Manager">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="officer">Liaison Officer</label>
+                              <input type="checkbox" id="officer" name="officer" value="officer">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="admin">Client Admin</label>
+                              <input type="checkbox" id="admin" name="admin" value="admin">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="provider">Provider Admin</label>
+                              <input type="checkbox" id="provider" name="provider" value="provider">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="platform">Platform Client Admin</label>
+                              <input type="checkbox" id="platform" name="platform" value="platform">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="accounts">Accounts</label>
+                              <input type="checkbox" id="accounts" name="accounts" value="accounts">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="manning">Manning Supdt</label>
+                              <input type="checkbox" id="manning" name="manning" value="manning">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="frm-check-list">
+                              <label for="fleet">Fleet Manager</label>
+                              <input type="checkbox" id="fleet" name="fleet" value="fleet">
+                            </div>
+                            </div>
+                      </div>
+                         <div class="suggested_button">
+                               <div class="like-btn">
+                                   <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                   </a>
+                                   <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                   </a>
+                               </div>
+                               <div class="discard-apply">
+                                 <a href="#" class="discard">Discard</a>
+                                 <a href="#">Apply</a>
+                               </div>
+                         </div>
+                      </div>
+                      <div class="tab-pane fade" id="nav-Augmentedstakeholder" role="tabpanel" aria-labelledby="nav-Augmentedstakeholder">
+                        <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                          Augmented</h4>
+                          <div class="chat_detail augmented_chart">
+                            <div class="send_receive">
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                      <div class="">
+                        <div class="sender_name">
+                          <span>You</span><span>10:10 AM</span>
+                        </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                      </div>
+                              </div>
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                           <div class="">
+                            <div class="sender_name">
+                              <span>You</span><span>10:10 AM</span>
+                            </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                           </div>
+                              </div>
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                              <div class="">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                              </div>
+                              </div>
+                              <div class="sendersection">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="sender">     Can you give me some detailson control set?</p>
+                              </div>
+                       
+                              <div class="sendersection">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="sender">     Can you give me some detailson control set?</p>
+                              </div>
+                              <div class="receiversection">
+                                <div class="profile">
+                                  <img src="./images/chat_user.png" alt="">
+                                </div>
+                              <div class="">
+                                <div class="sender_name">
+                                  <span>You</span><span>10:10 AM</span>
+                                </div>
+    <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                              </div>
+                              </div>
+    
+                            </div>
+            
+                            <div class="sent_message">
+                              <input type="text" placeholder="Type here..." />
+                              <button><img src="./images/send.png" /></button>
+                            </div>
+            
+                          </div>
+  
+                      </div>
+                    </div>           
+                  </div>
+            
+              </div>
+            </div>
+          </div>
+
+          <div class="chat_toggle dash_board_chat"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- jquery link  -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="./js/custom.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/selectize.min.js"></script>
+
+  <!-- bootstrap link  -->
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+
+      $(".project_collapse img").click(function () {
+        $(".project_list_collapse .project_consumes").toggle();
+      });
+
+      $('.next').click(function () {
+        $('.business_detail').hide();
+        $('.project_details').show();
+      });
+      $('.previous').click(function () {
+        $('.business_detail').show();
+        $('.project_details').hide();
+      });
+
+      $('.refresh').click(function () {
+        $('.search_highted_top').show();
+        $('.create_project_carousel').show();
+        $('.search_highted_top input').show();
+        $(".search_highted_top input").val('');
+        $('.trading_lst').hide();
+        $('.business_detail').hide();
+        $('.project_details').hide();
+      });
+
+      var availableTags = [
+        "HealthCare",
+        "To build a marketplace for services ",
+        "To build a marketplace for goods ",
+        "To build a marketplace for services ",
+        "To build a digital SaaS offering for businesses ",
+        "To build  a digital SaaS offering for consumers",
+        "To build a digital platform for my manufacturing business",
+        "To build a digital SaaS offering for businesses "
+      ];
+      $("#tags").autocomplete({
+        source: availableTags,
+        select: function (event, ui) {
+          addClass();
+        }
+      });
+
+
+    });
+
+    function addClass() {
+      document.querySelector("#tags").style.display = "none";
+      document.querySelector(".trading_lst").style.display = "block";
+      document.querySelector(".business_detail").style.display = "block";
+      document.querySelector(".create_project_carousel").style.display = "none";
+
+    }
+    let div = document.createElement("div");
+    let p = document.createElement("p");
+
+    var uploaderBtn = document.querySelector(".input")
+    var uploadername = document.querySelector(".filepath")
+    uploaderBtn.addEventListener('change', function (event) {
+      if (event.target.files.length > 0) {
+        var src = URL.createObjectURL(event.target.files[0]);
+        var preview = document.querySelector(".img").src = src;
+        uploadername.innerHTML = event.target.files[0].name
+      }
+    })
+  </script>
+  <script>
+    $(document).ready(function () {
+
+      $('#select-all-checkbox , #select-all-business').selectize({
+        preload: true,
+        plugins: ['remove_button'],
+        placeholder:"Add Business Funtion",
+
+        onInitialize: function () {
+          // Open the first option's content onload
+          var selectize = this;
+          selectize.open();
+          var firstOption = selectize.$dropdown_content.find('[data-value="1"]');
+          if (firstOption.length > 0) {
+            firstOption.addClass('highlighted');
+          }
+        },
+        onChange: function (value) {
+          // Highlight the selected option
+          this.$dropdown_content.find('.highlighted').removeClass('highlighted');
+          var selectedOption = this.$dropdown_content.find('[data-value="' + value + '"]');
+          if (selectedOption.length > 0) {
+            selectedOption.addClass('highlighted');
+          }
+        },
+
+        // render: {
+
+        //   option: function(data, escape) {
+
+        //     if (data.value === 'select_all') {
+
+        //       return '<div><input type="checkbox" class="select-all-checkbox" id="select-all-checkbox" /> <label for="select-all-checkbox">' + escape(data.text) + '</label></div>';
+
+        //     } else {
+
+        //       return '<div><input type="checkbox" value="' + escape(data.value) + '" ' + (data['$is_selected'] ? 'checked' : '') + ' /> ' + escape(data.text) + '</div>';
+
+        //     }
+
+        //   }
+
+        // },
+        onItemRemove: function (value, $item) {
+          // Callback for item removal
+          var labelText = $item.text(); // Get the label of the removed item
+          var $dropdown = this.$dropdown_content; // Get the dropdown content element
+
+          // Create a new option element and append it to the dropdown
+          var $newOption = $('<div class="option" data-selectable value="' + value + '">' + labelText + '</div>');
+          $dropdown.append($newOption);
+        },
+
+        onChange: function (value) {
+
+          if (value.includes('select_all')) {
+
+            const allOptions = Object.keys(this.options);
+
+            this.setValue(allOptions.filter(option => option !== 'select_all'));
+
+          } else {
+
+            const selectAllCheckbox = document.querySelector('.select-all-checkbox');
+
+            if (selectAllCheckbox) {
+
+              selectAllCheckbox.checked = value.length === allOptions.length - 1;
+
+            }
+
+          }
+
+        }
+
+      });
+
+    });
+
+  </script>
+  <script>
+    $(document).ready(function(){
+     $('.suggestedlogo').click(function(){
+       $('.suggested_logo_content').show();
+       $('.suggestedstakeholder_logo_content').hide();
+       $('.art_intel_common').hide();
+     })
+     $('.suggestedstakeholder').click(function(){
+       $('.suggestedstakeholder_logo_content').show();
+      $('.suggested_logo_content').hide();
+       $('.art_intel_common').hide();
+     });
+    });
+   $(document).on("change", ".frm-lst input[type='checkbox']", function () {
+	$(this).parent()[this.checked ? "addClass" : "removeClass"]("checked");
+});
+  </script>
+</body>
+
+</html>

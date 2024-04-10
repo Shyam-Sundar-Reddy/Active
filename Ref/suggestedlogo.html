@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahat</title>
+
+  <!-- css links  -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900" rel="stylesheet" type="text/css"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap"
+    rel="stylesheet">
+  <!-- bootstrap link  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/selectize.css">
+  <!-- font awesome link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+</head>
+
+<body class="mahat-wrapper">
+
+  <!-- header  -->
+  <header>
+    <div class="header_wrapper custom-container">
+      <div class="dashboard_logo">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="my_project_wrapper">
+        <a class="my_project active">
+          <div class="folder"><img src="./images/user_h.png" alt="project"></div>
+          <p class="font-15">My Project</p>
+        </a>
+        <a class="my_project ">
+          <div class="folder"><img src="./images/star.png" alt="current"></div>
+          <p class="font-15">Current Project</p>
+        </a>
+
+        <div class="dropdown my_project">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuSetting"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="folder"><img src="./images/set.png" alt="dropdownMenuSetting"></div>
+            <p class="font-15">Settings</p>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuSetting">
+            <li><a class="dropdown-item" href="#"><img src="./images/tech_blk.png" alt="dropdownMenuSetting">Tech
+                Settings</a></li>
+            <li><a class="dropdown-item" href="#"><img src="./images/ux_blk.png" alt="dropdownMenuSetting">UX
+                Settings</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="user_login_wrapper">
+        <p class="user_name font-16">John Doe</p>
+        <div class="user_logo"><img src="./images/userlogo.png" alt="userlogo"></div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- body section  -->
+  <section>
+    <div class="dashboard_wrapper custom-container">
+      <div class=" dashboard_row">
+        <div class="dashboard_left">
+          <div class="left_section">
+            <!-- <div class="left_head_section">
+                        <h1 class="font-24">Welcome Sandbox41!</h1>
+                        <ul>
+                          <li class="active"><a href="#">Inception</a></li>
+                          <li><a href="#">Build</a></li>
+                          <li><a href="#">Transition</a></li>
+                          <li><a href="#">Projects</a></li>
+                        </ul>
+                      </div> -->
+            <div class="left_content_section createproject_wrapper">
+              <div class="overview_section">
+                <!-- <h3 class="font-20">Overview</h3> -->
+              
+
+                <div class="createproject_section">
+                  <div class="row">
+                      <div class="col-sm-12">
+                             <h1>Create the Project with the Help of Mahat AI</h1>
+                             <p>Get started with new modern AI that help you to create new projects</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                      <label>Industry</label>
+                      <div class="business_tlt">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 22H22" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 2H7C4 2 3 3.79 3 6V22H21V6C21 3.79 20 2 17 2Z" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 16.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 16.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 12H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 12H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 7.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 7.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <input type="text" class="form-control purpose_of_project font-15" id="tags" placeholder="Choose your industry ">
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                      <label>Provide Industry Sub Domain or Additional Context</label>
+                      <div class="business_tlt">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 22H22" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17 2H7C4 2 3 3.79 3 6V22H21V6C21 3.79 20 2 17 2Z" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 16.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 16.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 12H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 12H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 7.5H10" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 7.5H17" stroke="#6B7174" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <input type="text" class="form-control purpose_of_project font-15" id="tags" placeholder="Refine AI suggestions ">
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="business_detail">
+                        <label>What are the involved Business Functions ?</label>
+                        <div class="business_tlt">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_171_2979)">
+                              <mask id="mask0_171_2979" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <path d="M0 1.90735e-06H24V24H0V1.90735e-06Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_171_2979)">
+                                <path d="M8.87466 3.73683L10.1473 0.937502H13.8525L15.1252 3.73683L17.5934 5.16188L20.654 4.86436L22.5066 8.07319L20.7187 10.575V13.4251L22.5066 15.9269L20.654 19.1357L17.5934 18.8381L15.1252 20.2632L13.8525 23.0625H10.1473L8.87466 20.2632L6.40641 18.8381L3.3458 19.1357L1.49316 15.9269L3.28116 13.4251V10.575L1.49316 8.07319L3.3458 4.86436L6.40641 5.16188L8.87466 3.73683Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6875 10.1563C15.6875 12.1928 14.0365 13.8438 12 13.8438C9.96348 13.8438 8.3125 12.1928 8.3125 10.1563C8.3125 8.11975 9.96348 6.46877 12 6.46877C14.0365 6.46877 15.6875 8.11975 15.6875 10.1563Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.49023 18.8864C6.73909 16.062 9.11083 13.8469 11.9999 13.8469C14.8891 13.8469 17.2608 16.062 17.5096 18.8865" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_171_2979">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <select id="select-all-checkbox" multiple>
+                            <option value="select_all">Select All</option>
+                            <option value="Sales" selected>Sales</option>
+                            <option value="Procurement">Procurement</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Inventory">Inventory</option>
+                            <option value="ServiceDelivery">Service Delivery</option>
+                            <option value="Support">Support</option>
+                            <option value="Production">Production</option>
+                            <option value="HumanResources">Human Resources</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Legal">Legal</option>
+                            <option value="InformationTechnology">Information Technology</option>
+                            <option value="ResearchandDevelopment">Research and Development</option>
+                            <option value="FacilityManagement">Facility Management</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Purchase">Purchase</option>
+                            <option value="Sourcing">Sourcing</option>
+                            <option value="VendorManagement">Vendor Management</option>
+                            <!-- Add more options here -->
+                        </select>
+                        </div>
+
+                        <!-- <div class="business_tlt top_suggestion">
+                          <img src="./images/question.png"/>
+                           <h1>Top Suggestions for E-Business</h1>
+                        </div> -->
+                   
+                  
+                     
+
+                       
+                      
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="business_detail">
+                        <label>What are the key Business Workflows?</label>
+                        <div class="business_tlt">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_171_2979)">
+                              <mask id="mask0_171_2979" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                <path d="M0 1.90735e-06H24V24H0V1.90735e-06Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_171_2979)">
+                                <path d="M8.87466 3.73683L10.1473 0.937502H13.8525L15.1252 3.73683L17.5934 5.16188L20.654 4.86436L22.5066 8.07319L20.7187 10.575V13.4251L22.5066 15.9269L20.654 19.1357L17.5934 18.8381L15.1252 20.2632L13.8525 23.0625H10.1473L8.87466 20.2632L6.40641 18.8381L3.3458 19.1357L1.49316 15.9269L3.28116 13.4251V10.575L1.49316 8.07319L3.3458 4.86436L6.40641 5.16188L8.87466 3.73683Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.6875 10.1563C15.6875 12.1928 14.0365 13.8438 12 13.8438C9.96348 13.8438 8.3125 12.1928 8.3125 10.1563C8.3125 8.11975 9.96348 6.46877 12 6.46877C14.0365 6.46877 15.6875 8.11975 15.6875 10.1563Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.49023 18.8864C6.73909 16.062 9.11083 13.8469 11.9999 13.8469C14.8891 13.8469 17.2608 16.062 17.5096 18.8865" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_171_2979">
+                                <rect width="24" height="24" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <select id="select-all-business" multiple>
+                            <option value="select_all">Select All</option>
+                            <option value="Sales" selected>Sales</option>
+                            <option value="Procurement">Procurement</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Inventory">Inventory</option>
+                            <option value="ServiceDelivery">Service Delivery</option>
+                            <option value="Support">Support</option>
+                            <option value="Production">Production</option>
+                            <option value="HumanResources">Human Resources</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Legal">Legal</option>
+                            <option value="InformationTechnology">Information Technology</option>
+                            <option value="ResearchandDevelopment">Research and Development</option>
+                            <option value="FacilityManagement">Facility Management</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Purchase">Purchase</option>
+                            <option value="Sourcing">Sourcing</option>
+                            <option value="VendorManagement">Vendor Management</option>
+                            <!-- Add more options here -->
+                        </select>
+                        </div>
+
+                        <!-- <div class="business_tlt top_suggestion">
+                          <img src="./images/question.png"/>
+                           <h1>Top Suggestions for E-Business</h1>
+                        </div> -->
+                   
+                  
+                     
+
+                       
+                      
+                        </div>
+                    </div>
+                    
+                 </div>
+                 <div class="row">
+                    <div class="project_detail_Frm">
+                      <form>
+                         <h2>Setup Your Project Details</h2>
+                         <div class="row">
+                         <div class="col-sm-6">
+                          <div class="mb-3">
+                            <label for="name" class="form-label">Project Name</label>
+                            
+                            <div class="business_tlt">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 7V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V7C3 4 4.5 2 8 2H16C19.5 2 21 4 21 7Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.5 4.5V6.5C14.5 7.6 15.4 8.5 16.5 8.5H18.5" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 13H12" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 17H16" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                      <input type="text" placeholder="Sample Project" autofocus="true" class="form-control" id="name">
+                      </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="industrys" class="form-label">Industry</label>
+                          
+                      <div class="business_tlt">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M2 22H22" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M17 2H7C4 2 3 3.79 3 6V22H21V6C21 3.79 20 2 17 2Z" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7 16.5H10" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 16.5H17" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7 12H10" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 12H17" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M7 7.5H10" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 7.5H17" stroke="#AFB2B5" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      <input type="text" class="form-control font-15" id="industrys" placeholder="Enter Your Industries">
+                      </div>
+                          </div>
+                         </div>
+                         <div class="col-sm-6">
+                          <div class="mb-3">
+                            <label for="name" class="form-label">Upload Logo </label>
+                            <div class="sectionHeader">
+                              <div class="img-section">
+                                  <img class="img" src="images/upload.png" alt="Logo" />
+                              </div>
+                            <div class="name-section">  <label for="buttonSection"><span class="filepath"></span><span class="uploadpart">Drop your file here or <span>Select a File</span> only JPEG, PNG are allowed up to 3mb in size</span></label></div>
+                              <input id="buttonSection" class="input" type="file" accept="image/*">
+                          </div>
+                          </div>
+                         </div>
+                         </div>
+                         <h2>Parties</h2>
+                         <div class="row">
+                           <div class="col-sm-4">
+                          <div class="mb-3 parties_frm">
+                            <label for="PlatformName" class="form-label">Platform Operator Name</label>
+                          
+                            <div class="business_tlt">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <input type="text" placeholder="Enter Name" class="form-control" id="PlatformName">
+                              </div>
+                          </div>
+                          </div>
+                          <div class="col-sm-4">
+                          <div class="mb-3 parties_frm">
+                            <label for="Provider" class="form-label">Provider Name</label>
+                            <div class="business_tlt">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <input type="text" placeholder="Enter Name" class="form-control" id="Provider">
+                              </div>
+                          </div> 
+                          </div>
+                          <div class="col-sm-4">
+                          <div class="mb-3 parties_frm">
+                            <label for="Consumer" class="form-label">Consumer Name</label>
+                            <div class="business_tlt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="#AFB2B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <input type="text" placeholder="Enter Name" class="form-control" id="Consumer">
+                            </div>
+                          </div>
+                          </div>
+                         </div>
+                       
+                      </form>
+                      <div class="create_btns">
+                        <button type="button" class="back_btn">Back</button>
+                        <button type="button" class="create_btn">Create</button>
+                     </div>
+                    </div>
+                 </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="dashboard_right">
+
+          <div class="loader"><img src="./images/loder.gif" /></div>
+          <div class="AIChat">
+            <div class="chat-head-tlt"><img src="./images/mahat_right_logo.png"/>Mahat <span>Artificial Intelligence</span></div>
+            <div class="suggested_logo">
+            <div class="current_project_detail_view">
+              <nav>
+                <div class="nav nav-tabs mb-3" id="nav-tab-myproject" role="tablist">
+                  <button class="nav-link active" id="nav-Suggestive-tab" data-bs-toggle="tab" data-bs-target="#nav-Suggestive"
+                   type="button" role="tab" aria-controls="nav-Suggestive" aria-selected="true">Suggestive </button>
+                  <button class="nav-link" id="nav-selfservice-tab" data-bs-toggle="tab" data-bs-target="#nav-selfservice" 
+                  type="button" role="tab" aria-controls="nav-selfservice" aria-selected="false">Self Service</button>
+                  <button class="nav-link" id="nav-Augmented-tab" data-bs-toggle="tab" data-bs-target="#nav-Augmented"
+                   type="button" role="tab" aria-controls="nav-Augmented" aria-selected="false">Augmented</button>
+              
+                </div>
+              </nav>
+            </div>
+            <div class="art_intel_sec ">
+
+                
+                <div class="art_intel_top">
+                  <div class="tab-content p-3 border bg-light" id="nav-tabContent-myproject">  
+                    <div class="tab-pane fade active show" id="nav-Suggestive" role="tabpanel" aria-labelledby="nav-Suggestive">
+                      <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                        Logo suggested</h4>
+                       
+                       <div class="logo-suggested_ico">
+                           <ul>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list1.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list2.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list3.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list4.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list5.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list6.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list7.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list2.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list1.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list5.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list3.png"/></a></li>
+                             <li><a href="#"><img src="./images/suggested_logo/ico_list4.png"/></a></li>
+                           </ul>
+                       </div> 
+                       <div class="suggested_button">
+                             <div class="like-btn">
+                                 <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                 </a>
+                                 <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                 </a>
+                             </div>
+                             <div class="discard-apply">
+                               <a href="#" class="discard">Discard</a>
+                               <a href="#">Apply</a>
+                             </div>
+                       </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-selfservice" role="tabpanel" aria-labelledby="nav-selfservice">
+                      <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                        Self Service</h4>
+                        <form>
+                          <div class="form-group">
+                             <input type="text" class="form-control" placeholder="Provide Health Care Logo">
+                             <button type="button" class="edit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <path d="M11.05 3.00002L4.20829 10.2417C3.94996 10.5167 3.69996 11.0584 3.64996 11.4334L3.34162 14.1333C3.23329 15.1083 3.93329 15.775 4.89996 15.6084L7.58329 15.15C7.95829 15.0834 8.48329 14.8084 8.74162 14.525L15.5833 7.28335C16.7666 6.03335 17.3 4.60835 15.4583 2.86668C13.625 1.14168 12.2333 1.75002 11.05 3.00002Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9.90845 4.20825C10.2668 6.50825 12.1334 8.26659 14.4501 8.49992" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M2.5 18.3333H17.5" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></button>
+                          </div>
+                          <div class="form-group form-submit-btn">
+                            <button type="submit" class="btn btn-default submit">Submit</button>
+                            <button type="button" class="cancel">Cancel</button>
+                          </div>
+                        </form>
+                        <div class="chat-subhead-tlt"><img src="./images/mahat_right_logo.png"><span>Mahat AI</span></div>
+                       <div class="logo-suggested_ico">
+                           <ul>
+                             <li><a href="#"><img src="./images/selfservice/ico_list1.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list2.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list3.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list4.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list5.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list6.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list7.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list8.png"/></a></li>
+                             <li><a href="#"><img src="./images/selfservice/ico_list9.png"/></a></li>
+                           </ul>
+                       </div> 
+                       <div class="suggested_button">
+                             <div class="like-btn">
+                                 <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                 </a>
+                                 <a href="#"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                 </a>
+                             </div>
+                             <div class="discard-apply">
+                               <a href="#" class="discard">Discard</a>
+                               <a href="#">Apply</a>
+                             </div>
+                       </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-Augmented" role="tabpanel" aria-labelledby="nav-Augmented">
+                      <h4><i class="fa fa-angle-left" aria-hidden="true"></i>
+                        Augmented</h4>
+                        <div class="chat_detail augmented_chart">
+                          <div class="send_receive">
+                            <div class="receiversection">
+                              <div class="profile">
+                                <img src="./images/chat_user.png" alt="">
+                              </div>
+                    <div class="">
+                      <div class="sender_name">
+                        <span>You</span><span>10:10 AM</span>
+                      </div>
+  <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                    </div>
+                            </div>
+                            <div class="receiversection">
+                              <div class="profile">
+                                <img src="./images/chat_user.png" alt="">
+                              </div>
+                         <div class="">
+                          <div class="sender_name">
+                            <span>You</span><span>10:10 AM</span>
+                          </div>
+  <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                         </div>
+                            </div>
+                            <div class="receiversection">
+                              <div class="profile">
+                                <img src="./images/chat_user.png" alt="">
+                              </div>
+                            <div class="">
+                              <div class="sender_name">
+                                <span>You</span><span>10:10 AM</span>
+                              </div>
+  <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                            </div>
+                            </div>
+                            <div class="sendersection">
+                              <div class="sender_name">
+                                <span>You</span><span>10:10 AM</span>
+                              </div>
+  <p class="sender">     Can you give me some detailson control set?</p>
+                            </div>
+                     
+                            <div class="sendersection">
+                              <div class="sender_name">
+                                <span>You</span><span>10:10 AM</span>
+                              </div>
+  <p class="sender">     Can you give me some detailson control set?</p>
+                            </div>
+                            <div class="receiversection">
+                              <div class="profile">
+                                <img src="./images/chat_user.png" alt="">
+                              </div>
+                            <div class="">
+                              <div class="sender_name">
+                                <span>You</span><span>10:10 AM</span>
+                              </div>
+  <p class="receiver">     Hi, I’m Mahat.ai chat bot. How can I help you today?</p>
+                            </div>
+                            </div>
+  
+                          </div>
+          
+                          <div class="sent_message">
+                            <input type="text" placeholder="Type here..." />
+                            <button><img src="./images/send.png" /></button>
+                          </div>
+          
+                        </div>
+
+                    </div>
+                  </div>           
+                </div>
+          
+            </div>
+          </div>
+
+
+          <!-- </div> -->
+
+          <div class="chat_toggle dash_board_chat"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- jquery link  -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="./js/custom.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/selectize.min.js"></script>
+
+  <!-- bootstrap link  -->
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+
+      $(".project_collapse img").click(function () {
+        $(".project_list_collapse .project_consumes").toggle();
+      });
+
+      $('.next').click(function () {
+        $('.business_detail').hide();
+        $('.project_details').show();
+      });
+      $('.previous').click(function () {
+        $('.business_detail').show();
+        $('.project_details').hide();
+      });
+
+      $('.refresh').click(function () {
+        $('.search_highted_top').show();
+        $('.create_project_carousel').show();
+        $('.search_highted_top input').show();
+        $(".search_highted_top input").val('');
+        $('.trading_lst').hide();
+        $('.business_detail').hide();
+        $('.project_details').hide();
+      });
+
+      var availableTags = [
+        "HealthCare",
+        "To build a marketplace for services ",
+        "To build a marketplace for goods ",
+        "To build a marketplace for services ",
+        "To build a digital SaaS offering for businesses ",
+        "To build  a digital SaaS offering for consumers",
+        "To build a digital platform for my manufacturing business",
+        "To build a digital SaaS offering for businesses "
+      ];
+      $("#tags").autocomplete({
+        source: availableTags,
+        select: function (event, ui) {
+          addClass();
+        }
+      });
+
+
+    });
+
+    function addClass() {
+      document.querySelector("#tags").style.display = "none";
+      document.querySelector(".trading_lst").style.display = "block";
+      document.querySelector(".business_detail").style.display = "block";
+      document.querySelector(".create_project_carousel").style.display = "none";
+
+    }
+    let div = document.createElement("div");
+    let p = document.createElement("p");
+
+    var uploaderBtn = document.querySelector(".input")
+    var uploadername = document.querySelector(".filepath")
+    uploaderBtn.addEventListener('change', function (event) {
+      if (event.target.files.length > 0) {
+        var src = URL.createObjectURL(event.target.files[0]);
+        var preview = document.querySelector(".img").src = src;
+        uploadername.innerHTML = event.target.files[0].name
+      }
+    })
+  </script>
+  <script>
+    $(document).ready(function () {
+
+      $('#select-all-checkbox , #select-all-business').selectize({
+        preload: true,
+        plugins: ['remove_button'],
+        placeholder:"Add Business Funtion",
+
+        onInitialize: function () {
+          // Open the first option's content onload
+          var selectize = this;
+          selectize.open();
+          var firstOption = selectize.$dropdown_content.find('[data-value="1"]');
+          if (firstOption.length > 0) {
+            firstOption.addClass('highlighted');
+          }
+        },
+        onChange: function (value) {
+          // Highlight the selected option
+          this.$dropdown_content.find('.highlighted').removeClass('highlighted');
+          var selectedOption = this.$dropdown_content.find('[data-value="' + value + '"]');
+          if (selectedOption.length > 0) {
+            selectedOption.addClass('highlighted');
+          }
+        },
+
+        // render: {
+
+        //   option: function(data, escape) {
+
+        //     if (data.value === 'select_all') {
+
+        //       return '<div><input type="checkbox" class="select-all-checkbox" id="select-all-checkbox" /> <label for="select-all-checkbox">' + escape(data.text) + '</label></div>';
+
+        //     } else {
+
+        //       return '<div><input type="checkbox" value="' + escape(data.value) + '" ' + (data['$is_selected'] ? 'checked' : '') + ' /> ' + escape(data.text) + '</div>';
+
+        //     }
+
+        //   }
+
+        // },
+        onItemRemove: function (value, $item) {
+          // Callback for item removal
+          var labelText = $item.text(); // Get the label of the removed item
+          var $dropdown = this.$dropdown_content; // Get the dropdown content element
+
+          // Create a new option element and append it to the dropdown
+          var $newOption = $('<div class="option" data-selectable value="' + value + '">' + labelText + '</div>');
+          $dropdown.append($newOption);
+        },
+
+        onChange: function (value) {
+
+          if (value.includes('select_all')) {
+
+            const allOptions = Object.keys(this.options);
+
+            this.setValue(allOptions.filter(option => option !== 'select_all'));
+
+          } else {
+
+            const selectAllCheckbox = document.querySelector('.select-all-checkbox');
+
+            if (selectAllCheckbox) {
+
+              selectAllCheckbox.checked = value.length === allOptions.length - 1;
+
+            }
+
+          }
+
+        }
+
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

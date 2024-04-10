@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahat</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap"
+  rel="stylesheet">
+  <!-- css links  -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/font.css">
+
+  <!-- font awesome link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap4.min.css"> -->
+  <!-- bootstrap link  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  
+
+
+
+</head>
+
+<body class="mahat-wrapper">
+  <!-- header  -->
+  <header>
+    <div class="header_wrapper custom-container">
+      <div class="dashboard_logo">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="my_project_wrapper">
+        <a class="my_project active">
+          <div class="folder"><img src="./images/user_h.png" alt="project"></div>
+          <p class="font-15">My Project</p>
+        </a>
+        <a class="my_project ">
+          <div class="folder"><img src="./images/star.png" alt="current"></div>
+          <p class="font-15">Current Project</p>
+        </a>
+
+        <div class="dropdown my_project">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuSetting"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="folder"><img src="./images/set.png" alt="dropdownMenuSetting"></div>
+            <p class="font-15">Settings</p>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuSetting">
+            <li><a class="dropdown-item" href="#"><img src="./images/tech_blk.png" alt="dropdownMenuSetting">Tech
+                Settings</a></li>
+            <li><a class="dropdown-item" href="#"><img src="./images/ux_blk.png" alt="dropdownMenuSetting">UX
+                Settings</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="user_login_wrapper">
+        <p class="user_name font-16">John Doe</p>
+        <div class="user_logo"><img src="./images/userlogo.png" alt="userlogo"></div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- body section  -->
+  <section>
+    <div class="dashboard_wrapper">
+    
+          
+          
+             <div class="harmacy_kit_head breadcrumbs_table">
+            
+              <div class="breadcrumbs">
+                <div class="pharmacy_backarrow">
+                  <img src="./images/back_arrow.png" alt="back_arrow">
+                  <h3>Circle Mobile Application </h3>
+                </div>
+              </div>
+              
+             </div>
+
+             
+                <div class="pharmacy_kit_wrapper entity_list dashboard_row dashboard_table">
+               <div class="dashboard_left">
+                <div class="design_entity">
+                  <div class="circle_app">
+                  <h3>List of Circle Mobile Application  </h3>
+                  <div class="filter-right">
+                  <div class="filter-buttons">
+                   <div class="list-view-button active"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <g clip-path="url(#clip0_240_886)">
+                      <path d="M17.2969 8.29688H5.07172C4.68338 8.29688 4.36859 8.61166 4.36859 9C4.36859 9.38834 4.68338 9.70312 5.07172 9.70312H17.2969C17.6852 9.70312 18 9.38834 18 9C18 8.61166 17.6852 8.29688 17.2969 8.29688Z" fill="#1780DD" stroke="#1780DD" stroke-width="0.1"/>
+                      <path d="M17.2969 3.02344H5.07172C4.68338 3.02344 4.36859 3.33823 4.36859 3.72656C4.36859 4.1149 4.68338 4.42969 5.07172 4.42969C5.07172 4.42969 16.9085 4.42969 17.2969 4.42969C17.6852 4.42969 18 4.1149 18 3.72656C18 3.33823 17.6852 3.02344 17.2969 3.02344Z" fill="#1780DD" stroke="#1780DD" stroke-width="0.1"/>
+                      <path d="M17.2969 13.5703H5.07172C4.68338 13.5703 4.36859 13.8851 4.36859 14.2734C4.36859 14.6618 4.68338 14.9766 5.07172 14.9766H17.2969C17.6852 14.9766 18 14.6618 18 14.2734C18 13.8851 17.6852 13.5703 17.2969 13.5703Z" fill="#1780DD" stroke="#1780DD" stroke-width="0.1"/>
+                      <path d="M1.94922 4.67578C2.47346 4.67578 2.89844 4.2508 2.89844 3.72656C2.89844 3.20232 2.47346 2.77734 1.94922 2.77734C1.42498 2.77734 1 3.20232 1 3.72656C1 4.2508 1.42498 4.67578 1.94922 4.67578Z" fill="#1780DD" stroke="#1780DD" stroke-width="0.1"/>
+                      <path d="M1.94922 9.94922C2.47346 9.94922 2.89844 9.52424 2.89844 9C2.89844 8.47576 2.47346 8.05078 1.94922 8.05078C1.42498 8.05078 1 8.47576 1 9C1 9.52424 1.42498 9.94922 1.94922 9.94922Z" fill="#1780DD" stroke="#1780DD" stroke-width="0.1"/>
+                      <path d="M1.94922 15.2227C2.47346 15.2227 2.89844 14.7977 2.89844 14.2734C2.89844 13.7492 2.47346 13.3242 1.94922 13.3242C1.42498 13.3242 1 13.7492 1 14.2734C1 14.7977 1.42498 15.2227 1.94922 15.2227Z" fill="#1780DD" stroke="#1780DD" stroke-width="0.1"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_240_886">
+                        <rect width="18" height="18" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg></div>
+                   <div class="grid-view-button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.50002 18.3334H12.5C16.6667 18.3334 18.3334 16.6667 18.3334 12.5001V7.50008C18.3334 3.33341 16.6667 1.66675 12.5 1.66675H7.50002C3.33335 1.66675 1.66669 3.33341 1.66669 7.50008V12.5001C1.66669 16.6667 3.33335 18.3334 7.50002 18.3334Z" stroke="#7D868F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.66669 10H18.3334" stroke="#7D868F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.875 10V17.9167" stroke="#7D868F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.125 18.3333V10" stroke="#7D868F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.875 10.0001V1.66675" stroke="#7D868F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.125 10V2.1167" stroke="#7D868F" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+                 </div>
+                 <div class="filterbtn">
+                           <img src="./images/filter-search.png"/><span>Filter</span>
+                         
+                 </div>
+                 </div>
+                </div>
+
+    <div class="accordian_sec">
+      <div class="accordian_sec_header">
+          <h2>Filters</h2>
+          <a href="#">Clear all</a>
+      </div>
+      <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Sizing
+                  </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <div class="form_input">
+                          <input type="checkbox" name="name" id="name">
+                          <label for="name">platform admin</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name2" id="name2">
+                          <label for="name2">mp manager</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="nam3" id="name3">
+                          <label for="name3">manager</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name4" id="name4">
+                          <label for="name4">client admin</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Stakeholders
+                  </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <div class="form_input">
+                          <input type="checkbox" name="name5" id="name5">
+                          <label for="name5">platform admin</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name6" id="name6">
+                          <label for="name6">mp manager</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name7" id="name7">
+                          <label for="name7">manager</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name8" id="name8">
+                          <label for="name8">client admin</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Priority
+                  </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <div class="form_input">
+                          <input type="checkbox" name="name9" id="name9">
+                          <label for="name9">platform admin</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name10" id="name10">
+                          <label for="name10">mp manager</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name11" id="name11">
+                          <label for="name11">manager</label>
+                      </div>
+                      <div class="form_input">
+                          <input type="checkbox" name="name12" id="name12">
+                          <label for="name12">client admin</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="apply_btn"><button type="button" >Apply</button></div>
+  </div>
+
+                
+
+
+                 <div class="grid-view">
+                        <div class="row">
+                              <div class="col-sm-4">
+                                     <div class="grid-view-lst">
+                                         <div class="list-app_topsection">
+                                              <div class="activity">
+                                                <label>Action Name</label>
+                                                <span>Activity List</span>
+                                              </div>
+                                              <div class="list-sizing">
+                                                <label>Sizing</label>
+                                                <div class="sizingxs sizing">
+                                                <span>Xs</span>
+                                              </div>
+                                              </div>
+                                         </div>
+                                          
+                                         <div class="list-app_middlesection">
+                                             <p>As a Platform Admin, MP Manager I would like to see the Activity List.</p>
+                                             <div class="stakeholders">
+                                                <p>Stakeholders</p>
+                                                <div class="stakeholder_btn">
+                                                  <a href="#">Platform Admin</a>
+                                                  <a href="#">MP Manager</a>
+                                                </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="list-app_bottomsection">
+                                          <div class="activity">
+                                            <label>Complexity</label>
+                                            <span>Simple</span>
+                                          </div>
+                                          <div class="list-sizing">
+                                            <label>Priority</label>
+                                            <span>Must to Have</span>
+                                          </div>
+                                     </div>
+                                     </div>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="grid-view-lst">
+                                    <div class="list-app_topsection">
+                                         <div class="activity">
+                                           <label>Action Name</label>
+                                           <span>Activity List</span>
+                                         </div>
+                                         <div class="list-sizing">
+                                           <label>Sizing</label>
+                                           <div class="sizingxs sizing">
+                                           <span>Xs</span>
+                                         </div>
+                                         </div>
+                                    </div>
+                                     
+                                    <div class="list-app_middlesection">
+                                        <p>As a Platform Admin, MP Manager I would like to see the Activity List.</p>
+                                        <div class="stakeholders">
+                                           <p>Stakeholders</p>
+                                           <div class="stakeholder_btn">
+                                             <a href="#">Platform Admin</a>
+                                             <a href="#">MP Manager</a>
+                                           </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="list-app_bottomsection">
+                                     <div class="activity">
+                                       <label>Complexity</label>
+                                       <span>Simple</span>
+                                     </div>
+                                     <div class="list-sizing">
+                                       <label>Priority</label>
+                                       <span>Must to Have</span>
+                                     </div>
+                                </div>
+                                </div>
+                         </div>
+                         <div class="col-sm-4">
+                          <div class="grid-view-lst">
+                              <div class="list-app_topsection">
+                                   <div class="activity">
+                                     <label>Action Name</label>
+                                     <span>Activity List</span>
+                                   </div>
+                                   <div class="list-sizing">
+                                     <label>Sizing</label>
+                                     <div class="sizingxs sizing">
+                                     <span>Xs</span>
+                                   </div>
+                                   </div>
+                              </div>
+                               
+                              <div class="list-app_middlesection">
+                                  <p>As a Platform Admin, MP Manager I would like to see the Activity List.</p>
+                                  <div class="stakeholders">
+                                     <p>Stakeholders</p>
+                                     <div class="stakeholder_btn">
+                                       <a href="#">Platform Admin</a>
+                                       <a href="#">MP Manager</a>
+                                     </div>
+                                  </div>
+                              </div>
+
+                              <div class="list-app_bottomsection">
+                               <div class="activity">
+                                 <label>Complexity</label>
+                                 <span>Simple</span>
+                               </div>
+                               <div class="list-sizing">
+                                 <label>Priority</label>
+                                 <span>Must to Have</span>
+                               </div>
+                          </div>
+                          </div>
+                   </div>
+                   <div class="col-sm-4">
+                    <div class="grid-view-lst">
+                        <div class="list-app_topsection">
+                             <div class="activity">
+                               <label>Action Name</label>
+                               <span>Activity List</span>
+                             </div>
+                             <div class="list-sizing">
+                               <label>Sizing</label>
+                               <div class="sizingxs sizing">
+                               <span>Xs</span>
+                             </div>
+                             </div>
+                        </div>
+                         
+                        <div class="list-app_middlesection">
+                            <p>As a Platform Admin, MP Manager I would like to see the Activity List.</p>
+                            <div class="stakeholders">
+                               <p>Stakeholders</p>
+                               <div class="stakeholder_btn">
+                                 <a href="#">Platform Admin</a>
+                                 <a href="#">MP Manager</a>
+                               </div>
+                            </div>
+                        </div>
+
+                        <div class="list-app_bottomsection">
+                         <div class="activity">
+                           <label>Complexity</label>
+                           <span>Simple</span>
+                         </div>
+                         <div class="list-sizing">
+                           <label>Priority</label>
+                           <span>Must to Have</span>
+                         </div>
+                    </div>
+                    </div>
+             </div>
+             <div class="col-sm-4">
+              <div class="grid-view-lst">
+                  <div class="list-app_topsection">
+                       <div class="activity">
+                         <label>Action Name</label>
+                         <span>Activity List</span>
+                       </div>
+                       <div class="list-sizing">
+                         <label>Sizing</label>
+                         <div class="sizingxs sizing">
+                         <span>Xs</span>
+                       </div>
+                       </div>
+                  </div>
+                   
+                  <div class="list-app_middlesection">
+                      <p>As a Platform Admin, MP Manager I would like to see the Activity List.</p>
+                      <div class="stakeholders">
+                         <p>Stakeholders</p>
+                         <div class="stakeholder_btn">
+                           <a href="#">Platform Admin</a>
+                           <a href="#">MP Manager</a>
+                         </div>
+                      </div>
+                  </div>
+
+                  <div class="list-app_bottomsection">
+                   <div class="activity">
+                     <label>Complexity</label>
+                     <span>Simple</span>
+                   </div>
+                   <div class="list-sizing">
+                     <label>Priority</label>
+                     <span>Must to Have</span>
+                   </div>
+              </div>
+              </div>
+       </div>
+       <div class="col-sm-4">
+        <div class="grid-view-lst">
+            <div class="list-app_topsection">
+                 <div class="activity">
+                   <label>Action Name</label>
+                   <span>Activity List</span>
+                 </div>
+                 <div class="list-sizing">
+                   <label>Sizing</label>
+                   <div class="sizingxs sizing">
+                   <span>Xs</span>
+                 </div>
+                 </div>
+            </div>
+             
+            <div class="list-app_middlesection">
+                <p>As a Platform Admin, MP Manager I would like to see the Activity List.</p>
+                <div class="stakeholders">
+                   <p>Stakeholders</p>
+                   <div class="stakeholder_btn">
+                     <a href="#">Platform Admin</a>
+                     <a href="#">MP Manager</a>
+                   </div>
+                </div>
+            </div>
+
+            <div class="list-app_bottomsection">
+             <div class="activity">
+               <label>Complexity</label>
+               <span>Simple</span>
+             </div>
+             <div class="list-sizing">
+               <label>Priority</label>
+               <span>Must to Have</span>
+             </div>
+        </div>
+        </div>
+ </div>
+ <div class="col-sm-4">
+  <div class="grid-view-lst">
+      <div class="list-app_topsection">
+           <div class="activity">
+             <label>Action Name</label>
+             <span>Activity List</span>
+           </div>
+           <div class="list-sizing">
+             <label>Sizing</label>
+             <div class="sizingxs sizing">
+             <span>Xs</span>
+           </div>
+           </div>
+      </div>
+       
+      <div class="list-app_middlesection">
+          <p>As a Platform Admin, MP Manager I would like to see the Activity List.</p>
+          <div class="stakeholders">
+             <p>Stakeholders</p>
+             <div class="stakeholder_btn">
+               <a href="#">Platform Admin</a>
+               <a href="#">MP Manager</a>
+             </div>
+          </div>
+      </div>
+
+      <div class="list-app_bottomsection">
+       <div class="activity">
+         <label>Complexity</label>
+         <span>Simple</span>
+       </div>
+       <div class="list-sizing">
+         <label>Priority</label>
+         <span>Must to Have</span>
+       </div>
+  </div>
+  </div>
+</div>
+                        </div>
+                 </div>
+                  <div class="list-view show">
+                 <table id="example" class="table table-striped table-bordered" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>Action Name</th>
+                          <th>Sizing</th>
+                          <th>Complexity</th>
+                          <th>Priority</th>
+                          <th>Stakeholder</th>
+                          <th>Title</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Activity List</td>
+                          <td class="sizingxs sizing"><span>XS</span></td>
+                          <td>Simple</td>
+                          <td>Must to Have</td>
+                          <td>Platform Admin,MP Manager</td>
+                          <td>As a Platform Admin,MP Manager I would like to see the Activity List.</td>
+                      </tr>
+                      <tr>
+                        <td>Add Activity</td>
+                        <td class="sizings sizing"><span>S</span></td>
+                        <td>Medium</td>
+                        <td>Good to Have</td>
+                        <td>MP Manager,Platform Admin</td>
+                        <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+                    </tr>
+                    <tr>
+                      <td>Add Agency Profile</td>
+                      <td class="sizingl sizing"><span>L</span></td>
+                      <td>Complex</td>
+                      <td>Must to Have</td>
+                      <td>Liaison Officer,Manager,Provider Admin</td>
+                      <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+                  </tr>
+                  <tr>
+                    <td>Add Agency Profile</td>
+                    <td class="sizingxl sizing"><span>XL</span></td>
+                    <td>Complex</td>
+                    <td>Must to Have</td>
+                    <td>Liaison Officer,Manager,Provider Admin</td>
+                    <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+                </tr>
+                <tr>
+                  <td>Add Agency Profile</td>
+                  <td class="sizingxxl sizing"><span>XXL</span></td>
+                  <td>Complex</td>
+                  <td>Must to Have</td>
+                  <td>Liaison Officer,Manager,Provider Admin</td>
+                  <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+              </tr>
+              <tr>
+                <td>Activity List</td>
+                <td class="sizingxs sizing"><span>XS</span></td>
+                <td>Simple</td>
+                <td>Must to Have</td>
+                <td>Platform Admin,MP Manager</td>
+                <td>As a Platform Admin,MP Manager I would like to see the Activity List.</td>
+            </tr>
+            <tr>
+              <td>Add Activity</td>
+              <td class="sizings sizing"><span>S</span></td>
+              <td>Medium</td>
+              <td>Good to Have</td>
+              <td>MP Manager,Platform Admin</td>
+              <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+          </tr>
+          <tr>
+            <td>Add Agency Profile</td>
+            <td class="sizingl sizing"><span>L</span></td>
+            <td>Complex</td>
+            <td>Must to Have</td>
+            <td>Liaison Officer,Manager,Provider Admin</td>
+            <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+        </tr>
+        <tr>
+          <td>Add Agency Profile</td>
+          <td class="sizingxl sizing"><span>XL</span></td>
+          <td>Complex</td>
+          <td>Must to Have</td>
+          <td>Liaison Officer,Manager,Provider Admin</td>
+          <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+      </tr>
+      <tr>
+        <td>Add Agency Profile</td>
+        <td class="sizingxxl sizing"><span>XXL</span></td>
+        <td>Complex</td>
+        <td>Must to Have</td>
+        <td>Liaison Officer,Manager,Provider Admin</td>
+        <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+    </tr>
+    <tr>
+      <td>Activity List</td>
+      <td class="sizingxs sizing"><span>XS</span></td>
+      <td>Simple</td>
+      <td>Must to Have</td>
+      <td>Platform Admin,MP Manager</td>
+      <td>As a Platform Admin,MP Manager I would like to see the Activity List.</td>
+  </tr>
+  <tr>
+    <td>Add Activity</td>
+    <td class="sizings sizing"><span>S</span></td>
+    <td>Medium</td>
+    <td>Good to Have</td>
+    <td>MP Manager,Platform Admin</td>
+    <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+</tr>
+<tr>
+  <td>Add Agency Profile</td>
+  <td class="sizingl sizing"><span>L</span></td>
+  <td>Complex</td>
+  <td>Must to Have</td>
+  <td>Liaison Officer,Manager,Provider Admin</td>
+  <td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+</tr>
+<tr>
+<td>Add Agency Profile</td>
+<td class="sizingxl sizing"><span>XL</span></td>
+<td>Complex</td>
+<td>Must to Have</td>
+<td>Liaison Officer,Manager,Provider Admin</td>
+<td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+</tr>
+<tr>
+<td>Add Agency Profile</td>
+<td class="sizingxxl sizing"><span>XXL</span></td>
+<td>Complex</td>
+<td>Must to Have</td>
+<td>Liaison Officer,Manager,Provider Admin</td>
+<td>As a MP Manager,Platform Admin I need to be able to Add Activity.</td>
+</tr>
+                  </tbody>
+                  <!-- <tfoot>
+                      <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                      </tr>
+                  </tfoot> -->
+              </table>
+            </div>
+                </div>
+                </div>
+                <div class="dashboard_right">
+
+                  <div class="loader"><img src="./images/loder.gif" /></div>
+                  <div class="AIChat">
+                    <div class="chat-head-tlt"><img src="./images/mahat_right_logo.png"/>Mahat AI<span>Technical Capabilities</span></div>
+                    <div class="chat_content_section">
+                      <div class="chat_left">
+                        <h5 class="chat_title">Multi Architecture Enabled</h5>
+                        <p class="chat_content">
+                          Mahat AI is enabled to suggest and understand Business Architecture, Technology Architecture and User Experience Architectures.
+                        </p>
+                      </div>
+                      <div class="chat_right green-clr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M12.5 22.0001H4.07997C2.91997 22.0001 1.96997 21.0701 1.96997 19.9301V5.09011C1.96997 2.47011 3.91997 1.2801 6.30997 2.4501L10.75 4.63011C11.71 5.10011 12.5 6.3501 12.5 7.4101V22.0001Z" stroke="#00AD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M21.97 15.0602V18.8402C21.97 21.0002 20.97 22.0002 18.81 22.0002H12.5V10.4202L12.97 10.5202L17.47 11.5302L19.5 11.9802C20.82 12.2702 21.9 12.9502 21.96 14.8702C21.97 14.9302 21.97 14.9902 21.97 15.0602Z" stroke="#00AD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.5 9H8.97" stroke="#00AD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.5 13H8.97" stroke="#00AD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M17.47 11.53V14.75C17.47 15.99 16.46 17 15.22 17C13.98 17 12.97 15.99 12.97 14.75V10.52L17.47 11.53Z" stroke="#00AD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M21.96 14.87C21.9 16.05 20.92 17 19.72 17C18.48 17 17.47 15.99 17.47 14.75V11.53L19.5 11.98C20.82 12.27 21.9 12.95 21.96 14.87Z" stroke="#00AD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat_content_section">
+                      <div class="chat_left">
+                        <h5 class="chat_title">Intelligent Modeling</h5>
+                        <p class="chat_content">
+                          Mahat AI suggests the business functions, business entities and user stories required for your application. Not just that it models your schemes and relates them too!
+                        </p>
+                      </div>
+                      <div class="chat_right orange-clr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <g clip-path="url(#clip0_176_4724)">
+                            <mask id="mask0_176_4724" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                              <path d="M0 1.90735e-06H24V24H0V1.90735e-06Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_176_4724)">
+                              <path d="M12 4.29168V19.7079C12 21.6031 10.4634 23.1396 8.56828 23.1396C7.02328 23.1396 5.71687 22.1187 5.28703 20.7143C5.23734 20.7171 5.18719 20.7181 5.13703 20.7181C3.24187 20.7181 1.70531 19.1815 1.70531 17.2864C1.70531 17.0201 1.73578 16.7604 1.79344 16.5115C1.12266 15.8857 0.703125 14.9932 0.703125 14.0032C0.703125 12.6111 1.53234 11.412 2.72391 10.8743C2.19609 10.2711 1.87594 9.48027 1.87594 8.61543C1.87594 6.73809 3.38344 5.21277 5.25469 5.18465C5.17781 4.90012 5.13703 4.60059 5.13703 4.29168C5.13703 2.39653 6.67312 0.860432 8.56828 0.860432C10.4634 0.860432 12 2.39653 12 4.29168Z" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M4.68651 10.6155C4.50698 10.5865 4.32276 10.5715 4.13479 10.5715C3.63183 10.5715 3.15464 10.6797 2.72386 10.8743H2.72339" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.79346 16.5116C2.40658 17.0844 3.23018 17.4346 4.13486 17.4346C4.84689 17.4346 5.56221 17.1697 6.11064 16.798" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M5.25464 5.18469C5.45808 5.94266 5.91464 6.59656 6.52776 7.05078" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M6.25501 14.7625C5.97751 15.0475 5.80688 15.4366 5.80688 15.8655C5.80688 16.7397 6.51563 17.4485 7.38985 17.4485C7.41423 17.4485 7.4386 17.448 7.46251 17.4471" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9.20959 9.8877V9.88723C9.42991 8.54426 10.5952 7.51957 12.0001 7.51957" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 15.8589C10.9688 15.8589 10.1133 15.1067 9.95166 14.1209V14.1205" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 5.65332H17.9384V3.51559" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.3446 2.10938C19.3446 2.886 18.715 3.51562 17.9384 3.51562C17.1617 3.51562 16.5321 2.886 16.5321 2.10938C16.5321 1.33275 17.1617 0.703125 17.9384 0.703125C18.715 0.703125 19.3446 1.33275 19.3446 2.10938Z" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 18.3466H17.9384V20.4844" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.3446 21.8906C19.3446 21.114 18.715 20.4844 17.9384 20.4844C17.1617 20.4844 16.5321 21.114 16.5321 21.8906C16.5321 22.6673 17.1617 23.2969 17.9384 23.2969C18.715 23.2969 19.3446 22.6673 19.3446 21.8906Z" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M23.2969 9.30493C23.2969 10.0816 22.6673 10.7112 21.8906 10.7112C21.114 10.7112 20.4844 10.0816 20.4844 9.30493C20.4844 8.52826 21.114 7.89868 21.8906 7.89868C22.6673 7.89868 23.2969 8.52826 23.2969 9.30493Z" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M20.4844 9.30493H12" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M19.3594 14.2263C19.3594 13.4497 18.7298 12.8201 17.9531 12.8201C17.1765 12.8201 16.5469 13.4497 16.5469 14.2263C16.5469 15.003 17.1765 15.6326 17.9531 15.6326C18.7298 15.6326 19.3594 15.003 19.3594 14.2263Z" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M16.5469 14.2263H12" stroke="#C57602" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_176_4724">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat_content_section">
+                      <div class="chat_left">
+                        <h5 class="chat_title">Function Governed Design</h5>
+                        <p class="chat_content">
+                          Controls with Mahat AI are not just technical like Textboxes, dates – They are functional – you can define a control to be prefilled or to be functionally dependent on an other business object
+                        </p>
+                      </div>
+                      <div class="chat_right violet-clr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <g clip-path="url(#clip0_176_4801)">
+                            <mask id="mask0_176_4801" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                              <path d="M0 1.90735e-06H24V24H0V1.90735e-06Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_176_4801)">
+                              <path d="M3.51562 14.1094C3.51562 14.886 2.886 15.5156 2.10938 15.5156C1.33275 15.5156 0.703125 14.886 0.703125 14.1094C0.703125 13.3327 1.33275 12.7031 2.10938 12.7031C2.886 12.7031 3.51562 13.3327 3.51562 14.1094Z" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M3.51562 2.85938C3.51562 3.636 2.886 4.26562 2.10938 4.26562C1.33275 4.26562 0.703125 3.636 0.703125 2.85938C0.703125 2.0827 1.33275 1.45312 2.10938 1.45312C2.886 1.45312 3.51562 2.0827 3.51562 2.85938Z" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M23.2969 14.1094C23.2969 14.886 22.6673 15.5156 21.8906 15.5156C21.114 15.5156 20.4844 14.886 20.4844 14.1094C20.4844 13.3327 21.114 12.7031 21.8906 12.7031C22.6673 12.7031 23.2969 13.3327 23.2969 14.1094Z" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M23.2969 2.85938C23.2969 3.636 22.6673 4.26562 21.8906 4.26562C21.114 4.26562 20.4844 3.636 20.4844 2.85938C20.4844 2.0827 21.114 1.45312 21.8906 1.45312C22.6673 1.45312 23.2969 2.0827 23.2969 2.85938Z" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M21.8906 12.7031C21.8906 7.74403 18.1767 3.64139 13.4062 2.95908" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M10.5938 2.95908C5.82333 3.64144 2.10938 7.74403 2.10938 12.7031" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M13.4062 4.26562H10.5938V1.45312H13.4062V4.26562Z" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M3.51562 2.85938H10.5937" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M13.4062 2.85938H20.4844" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M13.4062 19.7344L16.2188 14.1094L12 7.07812L7.78125 14.1094L10.5938 19.7344" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M16.2188 22.5469H7.78125V19.7344H16.2188V22.5469Z" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                              <path d="M12 7.07812V14.8125" stroke="#26258B" stroke-width="1.5" stroke-miterlimit="10"/>
+                            </g>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_176_4801">
+                              <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat_content_section">
+                      <div class="chat_left">
+                        <h5 class="chat_title">Single Click Preview & Publish</h5>
+                        <p class="chat_content">
+                          With Mahat, Preview your application in minutes with full features or move them to your Development, QA, Staging or Production environment via auto CI / CD pipelines.
+                        </p>
+                      </div>
+                      <div class="chat_right blue-clr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M5.75967 15.8392L3.69784 17.9011C3.03481 18.5641 3.03481 19.6391 3.69784 20.3022C4.36088 20.9652 5.43589 20.9652 6.09893 20.3022L8.16075 18.2404L9.34218 20.976C9.42478 21.1673 9.54422 21.3464 9.70054 21.5027C10.3636 22.1658 11.4386 22.1658 12.1016 21.5027C12.3271 21.2772 12.476 21.004 12.5481 20.7156L14.9492 11.1112C15.0891 10.5517 14.9402 9.93481 14.5027 9.49729C14.0652 9.05976 13.4483 8.91094 12.8888 9.05084L3.28443 11.4519C2.99601 11.5241 2.72283 11.6729 2.49728 11.8984C1.83424 12.5614 1.83424 13.6365 2.49728 14.2995C2.65356 14.4558 2.83277 14.5752 3.02402 14.6579L5.75967 15.8392Z" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M19 10H22" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M17.6669 13.7974L20.3178 16.4483" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M8 4L10 7" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 2V5" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M20 4L18 7" stroke="#1780DD" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="button_section_stART">
+                      <button class="start_button">Get Started <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                          viewBox="0 0 18 18" fill="none">
+                          <path d="M10.8225 4.44751L15.375 9.00001L10.8225 13.5525" stroke="white" stroke-width="1.5"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M2.625 9H15.2475" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></button>
+                    </div>
+                    <div class="robo_mg">
+                        <img src="./images/robo.png"/>
+                    </div>
+                  </div>
+        
+                  <div class="chat_toggle dash_board_chat"></div>
+                </div>
+                </div>
+
+          
+          
+               
+       
+         
+
+       
+       
+     
+    </div>
+  </section>
+
+
+  
+
+
+     <!-- jquery link  -->
+     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+     <script src="./js/custom.js"></script>
+     <script src="./js/jquery.min.js"></script>
+     <script src="./js/jquery-ui.js"></script>
+ 
+     <!-- bootstrap link  -->
+     <script src="./js/popper.min.js"></script> 
+     <script src="./js/bootstrap.min.js"></script>
+
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  
+
+<script type="text/javascript">
+  $(document).ready(function() {
+var dataTable = $('#example').DataTable({
+responsive: true,
+details: false,
+dom: '<"top"i>rt<"bottom"flp><"clear">',
+
+});
+$('#global_filter').keyup(function() {
+var table = $('#example').DataTable();
+table.search($(this).val()).draw();
+});
+$('#example').wrap('<div class="table-responsive"></div>');
+});
+</script>
+<script>
+   $(document).ready(function() {
+    $('.filterbtn').click(function(){
+       $('.accordian_sec').slideToggle();
+    });
+   });
+</script>
+<script>
+ var button1 = document.querySelector(".list-view-button")
+var section1 = document.querySelector(".list-view")
+var button2 = document.querySelector(".grid-view-button")
+var section2 = document.querySelector(".grid-view")
+function clickFunction(btnAdd, secAdd,btnRemove,sectionRemove){
+    btnAdd.addEventListener("click",() =>{
+        btnAdd.classList.add("active")
+        secAdd.classList.add("show")
+        btnRemove.classList.remove("active")
+        sectionRemove.classList.remove("show")
+       
+    })
+}
+clickFunction(button1, section1,button2,section2);
+clickFunction(button2, section2,button1,section1);
+</script>
+</body>
+
+</html>

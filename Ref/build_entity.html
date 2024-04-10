@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahat</title>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap"
+  rel="stylesheet">
+  <!-- css links  -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/font.css">
+
+  <!-- font awesome link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- bootstrap link  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="mahat-wrapper">
+  <!-- header  -->
+  <header>
+    <div class="header_wrapper custom-container">
+      <div class="dashboard_logo">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="my_project_wrapper">
+        <a class="my_project active">
+          <div class="folder"><img src="./images/user_h.png" alt="project"></div>
+          <p class="font-15">My Project</p>
+        </a>
+        <a class="my_project ">
+          <div class="folder"><img src="./images/star.png" alt="current"></div>
+          <p class="font-15">Current Project</p>
+        </a>
+
+        <div class="dropdown my_project">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuSetting"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="folder"><img src="./images/set.png" alt="dropdownMenuSetting"></div>
+            <p class="font-15">Settings</p>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuSetting">
+            <li><a class="dropdown-item" href="#"><img src="./images/tech_blk.png" alt="dropdownMenuSetting">Tech
+                Settings</a></li>
+            <li><a class="dropdown-item" href="#"><img src="./images/ux_blk.png" alt="dropdownMenuSetting">UX
+                Settings</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="user_login_wrapper">
+        <p class="user_name font-16">John Doe</p>
+        <div class="user_logo"><img src="./images/userlogo.png" alt="userlogo"></div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- body section  -->
+  <section>
+    <div class="dashboard_wrapper">
+    
+        <div class="dashbord-message-left">
+          
+           
+              <ul class="modal_side_nav_wrapper">
+                <li class="active">
+                  <a href="#">
+                    <div class="modal_side_nav">
+                      <img src="./images/modal.png" alt="modal">
+                    </div>
+                    <p>Model</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <div class="modal_side_nav">
+                    <img src="./images/build.png" alt="modal">
+                  </div>
+                  <p>Build</p>
+                </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <div class="modal_side_nav">
+                    <img src="./images/workflow.png" alt="modal">
+                  </div>
+                  <p>Workflow</p>
+                </a>
+                </li>
+                <li>
+                  <a href="#">
+                  <div class="modal_side_nav">
+                    <img src="./images/preview.png" alt="modal">
+                  </div>
+                  <p>Preview</p>
+                </a>
+                </li>
+                <li class="accor_arrow_right">
+                  <img src="./images/right_arrow.png" alt="arrow">
+                </li>
+              </ul>
+           
+            
+            <div class="harmacy_kit_head-wrapper">
+             <div class="harmacy_kit_head">
+              <div class="tools_accordion acc">
+                <div class="search_for_tool">
+                  <input type="text" placeholder="Search for the tools" class="form-control">
+                </div>
+                <div class="search_toll_collapse accordion">
+                  <div class="acc_card">
+                    <div class="serach_text_field accordion-header active" data-target="search_text_1">
+                      <h3>Text Fields</h3>
+                    </div>
+                    <div id="search_text_1" class="search_text_field_inner accordion-content " style="display:block">
+                      <ul>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_1.png" alt="single">
+                          </div>
+  
+                          Single
+                        </li>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_2.png" alt="Multi">
+                          </div>
+                          Multi
+                        </li>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_3.png" alt="rich_text">
+                          </div>
+                          Rich Text
+                        </li>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_3.png" alt="big_text">
+                          </div>
+                          Big Text
+                        </li>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_4.png" alt="email">
+                          </div>
+                          Email
+                        </li>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_5.png" alt="digit_mobile">
+                          </div>
+                          10 Digit Mobile
+                        </li>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_6.png" alt="url">
+                          </div>
+                          URL
+                        </li>
+                        <li>
+                          <div class="text_field_img">
+                            <img src="./images/text_field_7.png" alt="password">
+                          </div>
+                          Password
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_2">
+                    <h3>Numbers & Percentage</h3>
+                  </div>
+                  <div id="search_text_2" class="search_text_field_inner accordion-content  " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_3.png" alt="rich_text">
+                        </div>
+                        Rich Text
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_3.png" alt="big_text">
+                        </div>
+                        Big Text
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_4.png" alt="email">
+                        </div>
+                        Email
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_5.png" alt="digit_mobile">
+                        </div>
+                        10 Digit Mobile
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_6.png" alt="url">
+                        </div>
+                        URL
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_7.png" alt="password">
+                        </div>
+                        Password
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_3">
+                    <h3>Date & Time</h3>
+                  </div>
+                  <div id="search_text_3" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_4">
+                    <h3>Toggle buttons</h3>
+                  </div>
+                  <div id="search_text_4" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_5">
+                    <h3>Drop Down Lists</h3>
+                  </div>
+                  <div id="search_text_5" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_6">
+                    <h3>Upload documents</h3>
+                  </div>
+                  <div id="search_text_6" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_7">
+                    <h3>Ratings & color picker</h3>
+                  </div>
+                  <div id="search_text_7" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_8">
+                    <h3>Profile Information</h3>
+                  </div>
+                  <div id="search_text_8" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_9">
+                    <h3>Drop Down</h3>
+                  </div>
+                  <div id="search_text_9" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_10">
+                    <h3>Dependence</h3>
+                  </div>
+                  <div id="search_text_10" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_11">
+                    <h3>Calculations</h3>
+                  </div>
+                  <div id="search_text_11" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+                <!-- <div class="acc_card">
+                  <div class="serach_text_field accordion-header" data-target="search_text_12">
+                    <h3>Sections</h3>
+                  </div>
+                  <div id="search_text_12" class="search_text_field_inner accordion-content " >
+                    <ul>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_1.png" alt="single">
+                        </div>
+
+                        Single
+                      </li>
+                      <li>
+                        <div class="text_field_img">
+                          <img src="./images/text_field_2.png" alt="Multi">
+                        </div>
+                        Multi
+                      </li>
+                    </ul>
+                  </div>
+                </div>-->
+
+                </div> 
+                <div class="accor_arrow_left">
+                  <img src="./images/left_arow.png" alt="arrow">
+                </div>
+              </div>
+              <div class="pharmacy_kit_wrapper">
+                <div class="pharmacy_backarrow">
+                  <img src="./images/back_arrow.png" alt="back_arrow">
+                  <h3>Design your Entities</h3>
+                </div>
+                <div class="design_entity">
+                  <!-- <h6>Design your Entities</h6> -->
+                  <div class="design_entity_wrapper">
+
+                  
+                  <div class="deisgn_entity_content">
+                    <label for="">Entity Name *</label>
+                    <input type="text" value="Sample" class="form-control">
+                  </div>
+                  <div class="deisgn_entity_content">
+                    <label for="">Entity Type *</label>
+                    <select class="form-select">
+                      <option>Sample</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+                  <div class="deisgn_entity_content">
+                    <label for="">Entity Type *</label>
+                    <select class="form-select">
+                      <option>Sample</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+                  <div class="deisgn_entity_content">
+                    <label for="">Entity Type *</label>
+                    <select class="form-select">
+                      <option>Sample</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+                  <div class="cancel_sub_btn">
+                    <button class="btn">Cancel</button>
+                    <button class="btn">Save</button>
+                  </div>
+                </div>
+                </div>
+                <div class="click_req">
+                  Click Required Controls or Drag & Drop Below
+                </div>
+                <div class="user_detail_wrapper_head">
+
+               
+                <div class="user_detail_wrapper">
+                  <div class="uner_detail_inner">
+                  <div class="user_det_img"><img src="./images/input_logo.png" alt="user_logo"></div>
+                  <div class="user_name_input">
+                    <input type="text" value="user name" class="form-control">
+                  </div>
+                  <div class="user_name_input">
+                    <input type="text" value="user name" class="form-control">
+                  </div>
+                  <div class="validity_wraper">
+                  <div class="circle_validity active"></div>
+                  <div class="fingure_validity"></div>
+                  </div>
+                  <div class="choose_type_date">
+                    <input type="number" value="0" class="form-control" >
+                    <input type="number" value="128" class="form-control" >
+                  </div>
+                  <div class="cancel_wrapper">
+                    <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
+                  </div>
+                  </div>
+                </div>
+                <div class="user_detail_wrapper">
+                  <div class="uner_detail_inner">
+                  <div class="user_det_img"><img src="./images/num_logo.png" alt="user_logo"></div>
+                  <div class="user_name_input">
+                    <input type="text" value="Phone Number" class="form-control">
+                  </div>
+                  <div class="user_name_input">
+                    <input type="text" value="phonenumber" class="form-control">
+                  </div>
+                  <div class="validity_wraper">
+                  <div class="circle_validity active"></div>
+                  <div class="fingure_validity active"></div>
+                  </div>
+                  <div class="choose_type_date">
+                    <input type="number" value="0" class="form-control">
+                    <input type="number" value="99999999" class="form-control" >
+                  </div>
+                  <div class="cancel_wrapper">
+                    <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
+                  </div>
+                </div>
+                </div>
+            
+                <div class="user_detail_wrapper">
+                  <div class="uner_detail_inner">
+                  <div class="user_det_img"><img src="./images/question 2.png" alt="user_logo"></div>
+                  <div class="user_name_input">
+                    <input type="text" placeholder="Display Name" class="form-control">
+                  </div>
+                  <div class="user_name_input">
+                    <input type="text" placeholder="attributename" class="form-control">
+                  </div>
+                  <div class="validity_wraper">
+                  <div class="circle_validity"></div>
+                  <div class="fingure_validity"></div>
+                  </div>
+                  <div class="choose_type_date">
+                    <input type="number" value="0" class="form-control">
+                    <input type="number" value="256" class="form-control">
+                  </div>
+                  <div class="cancel_wrapper">
+                    <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
+                  </div>
+                </div>
+                </div>
+               
+              </div>
+             </div>
+             </div>
+               
+            </div>
+         
+
+        </div>
+        <div class=" message_tab">
+          <ul class="nav nav-tabs dashboard_tab" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#Create_Project"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Create Project</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Chat" type="button"
+                role="tab" aria-controls="profile-tab-pane" aria-selected="false">Chat</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade " id="Create_Project" role="tabpanel" aria-labelledby="home-tab"
+              tabindex="0">
+
+              <h2 class="create_project_greeting font-24">Hi! 👋</h2>
+              <p class="like_to_create font-18">What Would you Like to Create</p>
+              <input type="text" class="form-control purpose_of_project font-15" placeholder="Enter Your Puspose">
+              <div class="create_project_carousel">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                  </div>
+
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="digital_core_wrapper">
+                        <div class="digital_core_img"><img src="./images/digital_core.png" alt="digitalcore"></div>
+                        <h3 class="font-18">Digital Core</h3>
+                        <p class="digital_core_trade font-13">Trading</p>
+                        <p class="font-15 digital_core_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                          sed do eiusmod tempor incididunt ut.</p>
+                        <p class="font-14 digital_example">Example </p>
+                        <p class="font-14 digital_example_content">
+                          E-Trade, Ally Invest, TradeStation, Firstrade, Upstox, Choice, eToro, E*Trade, SAS Online,
+                          Angel Broking </p>
+                      </div>
+                      <button class="btn font-15 create_btn">Create</button>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="digital_core_wrapper">
+                        <div class="digital_core_img"><img src="./images/digital_core.png" alt="digitalcore"></div>
+                        <h3 class="font-18">Digital Core</h3>
+                        <p class="digital_core_trade font-13">Trading</p>
+                        <p class="font-15 digital_core_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                          sed do eiusmod tempor incididunt ut.</p>
+                        <p class="font-14 digital_example">Example </p>
+                        <p class="font-14 digital_example_content">
+                          E-Trade, Ally Invest, TradeStation, Firstrade, Upstox, Choice, eToro, E*Trade, SAS Online,
+                          Angel Broking </p>
+                      </div>
+                      <button class="btn font-15 create_btn">Create</button>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="digital_core_wrapper">
+                        <div class="digital_core_img"><img src="./images/digital_core.png" alt="digitalcore"></div>
+                        <h3 class="font-18">Digital Core</h3>
+                        <p class="digital_core_trade font-13">Trading</p>
+                        <p class="font-15 digital_core_para">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                          sed do eiusmod tempor incididunt ut.</p>
+                        <p class="font-14 digital_example">Example </p>
+                        <p class="font-14 digital_example_content">
+                          E-Trade, Ally Invest, TradeStation, Firstrade, Upstox, Choice, eToro, E*Trade, SAS Online,
+                          Angel Broking </p>
+                      </div>
+                      <button class="btn font-15 create_btn">Create</button>
+                    </div>
+                  </div>
+
+                  <!-- Left and right controls/icons -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade show active" id="Chat" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <div class="chat_detail">
+                <div class="send_receive">
+                  <div class="receiver">
+                    Hi, I’m Mahat.ai chat bot. How can I help you today?
+                  </div>
+                  <div class="sender">
+                    Can you give me some details
+                    on control set?
+                  </div>
+                  <div class="receiver">
+                    Hi, I’m Mahat.ai chat bot. How can I help you today?
+                  </div>
+                  <div class="sender">
+                    Can you give me some details
+                    on control set?
+                  </div>
+                </div>
+
+                <div class="sent_message">
+                  <input type="text" placeholder="Type here..." />
+                  <button><img src="./images/send.png" /></button>
+                </div>
+
+              </div>
+            </div>
+          </div>  
+          <div class="chat_toggle">
+          </div>
+        </div>
+     
+    </div>
+  </section>
+ 
+  <!-- jquery link  -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="./js/custom.js"></script>
+  <script src="./js/jquery.min.js"></script>
+ <!-- bootstrap link  -->
+
+ <script src="./js/bootstrap.min.js"></script>
+
+
+ <script>
+
+const ui = {
+ single: {
+    wrapperClass: "user_detail_wrapper",
+    innerClass: "uner_detail_inner",
+    imgSrc: "./images/input_logo.png",
+    imgAlt: "user_logo",
+    inputValues: ["user name", "user name"],
+    validityClasses: ["circle_validity active", "fingure_validity"],
+    dateValues: [0, 128],
+    cancelBtnSrc: "./images/circle_red_circle.png",
+    cancelBtnAlt: "cancel_btn"
+ },
+ multi: {
+    wrapperClass: "user_detail_wrapper",
+    innerClass: "uner_detail_inner",
+    imgSrc: "./images/question 2.png",
+    imgAlt: "user_logo",
+    inputValues: ["Display Name", "attributename"],
+    validityClasses: ["circle_validity", "fingure_validity"],
+    dateValues: [0, 256],
+    cancelBtnSrc: "./images/circle_red_circle.png",
+    cancelBtnAlt: "cancel_btn"
+ },
+ mobile: {
+    wrapperClass: "user_detail_wrapper",
+    innerClass: "uner_detail_inner",
+    imgSrc: "./images/num_logo.png",
+    imgAlt: "user_logo",
+    inputValues: ["Phone Number", "phonenumber"],
+    validityClasses: ["circle_validity active", "fingure_validity active"],
+    dateValues: [0, 99999999],
+    cancelBtnSrc: "./images/circle_red_circle.png",
+    cancelBtnAlt: "cancel_btn"
+ }
+};
+
+// Example usage
+console.log(ui.single.imgSrc); // Outputs: ./images/input_logo.png
+console.log(ui.multi.inputValues); // Outputs: ["Display Name", "attributename"]
+console.log(ui.mobile.validityClasses); // Outputs: ["circle_validity active", "fingure_validity active"]
+
+ </script>
+</body>
+
+</html>
