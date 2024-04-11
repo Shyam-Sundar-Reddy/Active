@@ -10,6 +10,7 @@
   href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap"
   rel="stylesheet">
   <!-- css links  -->
+  
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/responsive.css">
   <link rel="stylesheet" href="./css/font.css">
@@ -20,7 +21,14 @@
   <!-- bootstrap link  -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <script src="./js/bootstrap.bundle.min.js"></script>
+ 
+  <style>
+  .acc_card:hover, .user_detail_wrapper_head:hover, .design_entity:hover {
+    box-shadow: 0 0 10px 2px orange;
+    transition: box-shadow 0.3s ease;
+}
 
+  </style>
 </head>
 
 <body class="mahat-wrapper">
@@ -134,18 +142,22 @@
                     </div>
                     <div id="search_text_1" class="search_text_field_inner accordion-content " style="display:block">
                       <ul>
-                        <li>
+                        <li  data-type="single">
+                          <div class="single">
                           <div class="text_field_img">
                             <img src="./images/text_field_1.png" alt="single">
                           </div>
   
                           Single
+                        </div>
                         </li>
-                        <li>
+                        <li  data-type="multi">
+                          <div class="multi">
                           <div class="text_field_img">
                             <img src="./images/text_field_2.png" alt="Multi">
                           </div>
                           Multi
+                        </div>
                         </li>
                         <li>
                           <div class="text_field_img">
@@ -165,11 +177,13 @@
                           </div>
                           Email
                         </li>
-                        <li>
+                        <li  data-type="mobile">
+                          <div class="mobile">
                           <div class="text_field_img">
                             <img src="./images/text_field_5.png" alt="digit_mobile">
                           </div>
                           10 Digit Mobile
+                        </div>
                         </li>
                         <li>
                           <div class="text_field_img">
@@ -186,284 +200,8 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_2">
-                    <h3>Numbers & Percentage</h3>
-                  </div>
-                  <div id="search_text_2" class="search_text_field_inner accordion-content  " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_3.png" alt="rich_text">
-                        </div>
-                        Rich Text
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_3.png" alt="big_text">
-                        </div>
-                        Big Text
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_4.png" alt="email">
-                        </div>
-                        Email
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_5.png" alt="digit_mobile">
-                        </div>
-                        10 Digit Mobile
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_6.png" alt="url">
-                        </div>
-                        URL
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_7.png" alt="password">
-                        </div>
-                        Password
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_3">
-                    <h3>Date & Time</h3>
-                  </div>
-                  <div id="search_text_3" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_4">
-                    <h3>Toggle buttons</h3>
-                  </div>
-                  <div id="search_text_4" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_5">
-                    <h3>Drop Down Lists</h3>
-                  </div>
-                  <div id="search_text_5" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_6">
-                    <h3>Upload documents</h3>
-                  </div>
-                  <div id="search_text_6" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_7">
-                    <h3>Ratings & color picker</h3>
-                  </div>
-                  <div id="search_text_7" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_8">
-                    <h3>Profile Information</h3>
-                  </div>
-                  <div id="search_text_8" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_9">
-                    <h3>Drop Down</h3>
-                  </div>
-                  <div id="search_text_9" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_10">
-                    <h3>Dependence</h3>
-                  </div>
-                  <div id="search_text_10" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_11">
-                    <h3>Calculations</h3>
-                  </div>
-                  <div id="search_text_11" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div> -->
-                <!-- <div class="acc_card">
-                  <div class="serach_text_field accordion-header" data-target="search_text_12">
-                    <h3>Sections</h3>
-                  </div>
-                  <div id="search_text_12" class="search_text_field_inner accordion-content " >
-                    <ul>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_1.png" alt="single">
-                        </div>
-
-                        Single
-                      </li>
-                      <li>
-                        <div class="text_field_img">
-                          <img src="./images/text_field_2.png" alt="Multi">
-                        </div>
-                        Multi
-                      </li>
-                    </ul>
-                  </div>
-                </div>-->
+                      
+                
 
                 </div> 
                 <div class="accor_arrow_left">
@@ -478,15 +216,16 @@
                 <div class="design_entity">
                   <!-- <h6>Design your Entities</h6> -->
                   <div class="design_entity_wrapper">
+                    <div id="spokenText" style="margin-top: 20px; font-size: 20px; color: blue;"></div>
 
                   
                   <div class="deisgn_entity_content">
                     <label for="">Entity Name *</label>
-                    <input type="text" value="Sample" class="form-control">
+                    <input type="text" value="" class="form-control" id="Name">
                   </div>
                   <div class="deisgn_entity_content">
                     <label for="">Entity Type *</label>
-                    <select class="form-select">
+                    <select class="form-select" id="type">
                       <option>Sample</option>
                       <option>2</option>
                       <option>3</option>
@@ -494,8 +233,8 @@
                     </select>
                   </div>
                   <div class="deisgn_entity_content">
-                    <label for="">Entity Type *</label>
-                    <select class="form-select">
+                    <label for="">Entity Data*</label>
+                    <select class="form-select" id="data">
                       <option>Sample</option>
                       <option>2</option>
                       <option>3</option>
@@ -503,8 +242,8 @@
                     </select>
                   </div>
                   <div class="deisgn_entity_content">
-                    <label for="">Entity Type *</label>
-                    <select class="form-select">
+                    <label for="">Menu item*</label>
+                    <select class="form-select" id="item">
                       <option>Sample</option>
                       <option>2</option>
                       <option>3</option>
@@ -523,74 +262,7 @@
                 <div class="user_detail_wrapper_head">
 
                
-                <div class="user_detail_wrapper">
-                  <div class="uner_detail_inner">
-                  <div class="user_det_img"><img src="./images/input_logo.png" alt="user_logo"></div>
-                  <div class="user_name_input">
-                    <input type="text" value="user name" class="form-control">
-                  </div>
-                  <div class="user_name_input">
-                    <input type="text" value="user name" class="form-control">
-                  </div>
-                  <div class="validity_wraper">
-                  <div class="circle_validity active"></div>
-                  <div class="fingure_validity"></div>
-                  </div>
-                  <div class="choose_type_date">
-                    <input type="number" value="0" class="form-control" >
-                    <input type="number" value="128" class="form-control" >
-                  </div>
-                  <div class="cancel_wrapper">
-                    <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
-                  </div>
-                  </div>
-                </div>
-                <div class="user_detail_wrapper">
-                  <div class="uner_detail_inner">
-                  <div class="user_det_img"><img src="./images/num_logo.png" alt="user_logo"></div>
-                  <div class="user_name_input">
-                    <input type="text" value="Phone Number" class="form-control">
-                  </div>
-                  <div class="user_name_input">
-                    <input type="text" value="phonenumber" class="form-control">
-                  </div>
-                  <div class="validity_wraper">
-                  <div class="circle_validity active"></div>
-                  <div class="fingure_validity active"></div>
-                  </div>
-                  <div class="choose_type_date">
-                    <input type="number" value="0" class="form-control">
-                    <input type="number" value="99999999" class="form-control" >
-                  </div>
-                  <div class="cancel_wrapper">
-                    <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
-                  </div>
-                </div>
-                </div>
-            
-                <div class="user_detail_wrapper">
-                  <div class="uner_detail_inner">
-                  <div class="user_det_img"><img src="./images/question 2.png" alt="user_logo"></div>
-                  <div class="user_name_input">
-                    <input type="text" placeholder="Display Name" class="form-control">
-                  </div>
-                  <div class="user_name_input">
-                    <input type="text" placeholder="attributename" class="form-control">
-                  </div>
-                  <div class="validity_wraper">
-                  <div class="circle_validity"></div>
-                  <div class="fingure_validity"></div>
-                  </div>
-                  <div class="choose_type_date">
-                    <input type="number" value="0" class="form-control">
-                    <input type="number" value="256" class="form-control">
-                  </div>
-                  <div class="cancel_wrapper">
-                    <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
-                  </div>
-                </div>
-                </div>
-               
+              
               </div>
              </div>
              </div>
@@ -717,59 +389,239 @@
     </div>
   </section>
  
+
   <!-- jquery link  -->
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+   
   <script src="./js/custom.js"></script>
   <script src="./js/jquery.min.js"></script>
  <!-- bootstrap link  -->
 
  <script src="./js/bootstrap.min.js"></script>
+ 
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+  const config = {
+        'single': [
+            {type: 'text', placeholder: 'User Name', value: '', maxlength: '128'}
+        ],
+        'multi': [
+            {type: 'text', placeholder: 'Display Name', value: '', maxlength: '256'}
+        ],
+        'mobile': [
+            {type: 'text', placeholder: 'Phone Number', value: '', maxlength: '10'}
+        ]
+    };
 
+    // Speech recognition setup
+    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (typeof SpeechRecognition !== "undefined") {
+        var recognition = new SpeechRecognition();
+        recognition.continuous = true; // Keep listening even after speech has stopped
+        recognition.lang = 'en-IND';
+        var recognizing = false; // A flag to keep track of whether recognition is active
+        var activeInputElement = null; // To keep track of the currently focused input
+        var currentHoverDiv = null; // To keep track of the currently hovered div
 
- <script>
+        recognition.onstart = function() {
+            recognizing = true;
+        };
 
-const ui = {
- single: {
-    wrapperClass: "user_detail_wrapper",
-    innerClass: "uner_detail_inner",
-    imgSrc: "./images/input_logo.png",
-    imgAlt: "user_logo",
-    inputValues: ["user name", "user name"],
-    validityClasses: ["circle_validity active", "fingure_validity"],
-    dateValues: [0, 128],
-    cancelBtnSrc: "./images/circle_red_circle.png",
-    cancelBtnAlt: "cancel_btn"
- },
- multi: {
-    wrapperClass: "user_detail_wrapper",
-    innerClass: "uner_detail_inner",
-    imgSrc: "./images/question 2.png",
-    imgAlt: "user_logo",
-    inputValues: ["Display Name", "attributename"],
-    validityClasses: ["circle_validity", "fingure_validity"],
-    dateValues: [0, 256],
-    cancelBtnSrc: "./images/circle_red_circle.png",
-    cancelBtnAlt: "cancel_btn"
- },
- mobile: {
-    wrapperClass: "user_detail_wrapper",
-    innerClass: "uner_detail_inner",
-    imgSrc: "./images/num_logo.png",
-    imgAlt: "user_logo",
-    inputValues: ["Phone Number", "phonenumber"],
-    validityClasses: ["circle_validity active", "fingure_validity active"],
-    dateValues: [0, 99999999],
-    cancelBtnSrc: "./images/circle_red_circle.png",
-    cancelBtnAlt: "cancel_btn"
- }
-};
+        recognition.onerror = function(event) {
+            console.error('Speech recognition error:', event.error);
+            recognizing = false;
+        };
 
-// Example usage
-console.log(ui.single.imgSrc); // Outputs: ./images/input_logo.png
-console.log(ui.multi.inputValues); // Outputs: ["Display Name", "attributename"]
-console.log(ui.mobile.validityClasses); // Outputs: ["circle_validity active", "fingure_validity active"]
+        recognition.onend = function() {
+            recognizing = false;
+            // Automatically restart recognition if an input field is focused.
+            if (activeInputElement) {
+                recognition.start();
+            }
+        };
 
- </script>
-</body>
+        recognition.onresult = function(event) {
+            var last = event.results.length - 1;
+            var command = event.results[last][0].transcript.trim();
+          
+    if (activeInputElement) {
+       
+        $(activeInputElement).val(function(i, oldVal) {
+            return oldVal + ' ' + command;  
+        });
+    }
+    
+    
+    else {
+        console.log("No active input element. Recognized speech:", command);
+    }
+            if (currentHoverDiv === '.acc_card') {
+              for (var key in config) {
+                if (command.toLowerCase().includes(key)) {
+                    // Generate and append the UI based on the recognized command
+                    console.log('Sorting and adding class based on:', command);
+                    appendUIBasedOnCommand(key);
+                    break; // Exit after the first match to prevent multiple appends
+                }
+            }
+            
+            } else if (currentHoverDiv === '.user_detail_wrapper_head') {
+               
+                console.log('Currently hovered div:', currentHoverDiv, 'Said:', command);
+            } else if (currentHoverDiv === '.design_entity') {
+                 console.log('Currently hovered div:', currentHoverDiv, 'Said:', command);
+        $('.design_entity').find('input, select').each(function() {
+
+            var id = $(this).attr('id');
+            if (id && id.toLowerCase() === command.toLowerCase()) {
+                // Perform the action based on the type of element
+                if ($(this).is('input')) {
+                    $(this).focus();
+                } else if ($(this).is('select')) {
+                    $(this).focus();
+                   
+                }
+                return false;  
+            }
+        });
+    }
+
+            else if(activeInputElement){
+            $(activeInputElement).val(command); // Set the value of the active input element
+        }
+        else{
+console.log("ignore")
+        }
+        };
+
+        // Function to manage starting of speech recognition
+        function startRecognition() {
+            if (!recognizing) {
+                recognition.start();
+            }
+        }
+
+        // Attach focus and blur event handlers to input fields inside .user_detail_wrapper_head
+        $('.user_detail_wrapper_head,.design_entity').on('focus', 'input', function() {
+          startSpeechRecognitionForInput(this);
+            // No class is added here
+        }).on('blur', 'input', function() {
+            activeInputElement = null; // Clear the active input
+            
+        });
+
+        // Start recognition on page load
+        startRecognition();
+    } else {
+        console.log('Speech Recognition not supported in this browser.');
+    }
+
+    // Function to append UI based on command
+    function appendUIBasedOnCommand(command) {
+        if (command in config) {
+            var content = generateContent(command, config[command]);
+            $('.user_detail_wrapper_head').append(content);
+        }
+    }
+
+    $(function() {
+ // Make the .user_detail_wrapper_head accept drops
+ $(".user_detail_wrapper_head").droppable({
+        accept: ".acc_card .single, .acc_card .multi, .acc_card .mobile",
+        drop: function(event, ui) {
+            // Extract the type from the dropped element's class
+            var type = ui.draggable.attr('class').split(' ')[1]; // Assuming the type is the second class
+            appendUIBasedOnCommand(type);
+        }
+    });
+
+ // Make the elements inside .acc_card draggable
+ $(".acc_card .single, .acc_card .multi, .acc_card .mobile").draggable({
+    helper: "clone",
+    revert: "invalid"
+ });
+});
+
+    // Function to generate content based on type and fields
+    const imageSources = {
+        'single': './images/input_logo.png',
+        'multi': './images/question 2.png',
+        'mobile': './images/num_logo.png'
+    };
+
+    // Function to generate content based on type and fields
+    function generateContent(type, fields) {
+        let innerContent = fields.map(field => `
+            <div class="user_name_input">
+                <input type="${field.type}" placeholder="${field.placeholder}" value="${field.value}" class="form-control" maxlength="${field.maxlength}">
+            </div>
+            <div class="user_name_input">
+                <input type="${field.type}" placeholder="attributename" value="${field.value}" class="form-control" maxlength="${field.maxlength}">
+            </div>
+        `).join('');
+
+        let content = `
+            <div class="user_detail_wrapper">
+                <div class="${type}">
+                    <div class="uner_detail_inner">
+                        <div class="user_det_img"><img src="${imageSources[type]}" alt="${type}_logo"></div>
+                        ${innerContent}
+                        <div class="validity_wraper">
+                  <div class="circle_validity active"></div>
+                  <div class="fingure_validity"></div>
+                  </div>
+                        <div class="choose_type_date">
+                            <input type="number" value="0" class="form-control">
+                            <input type="number" value="${type === 'multi' ? '256' : '128'}" class="form-control">
+                        </div>
+                        <div class="cancel_wrapper">
+                            <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        return content;
+    }
+
+    // Function to append UI based on command
+    function appendUIBasedOnCommand(command) {
+        if (command in config) {
+            var content = generateContent(command, config[command]);
+            $('.user_detail_wrapper_head').append(content);
+        }
+    }
+   
+    var focusDivSelectors = ['.acc_card', '.user_detail_wrapper_head', '.design_entity'];
+ 
+// Attach event listeners for hover (enter/leave) events to specified divs
+focusDivSelectors.forEach(function(selector) {
+        $(selector).on('mouseenter', function() {
+            currentHoverDiv = selector;
+        }).on('mouseleave', function() {
+            currentHoverDiv = null;
+        });
+    });
+
+  // New function to handle speech recognition for input fields
+  function startSpeechRecognitionForInput(inputElement) {
+        if (!recognizing) {
+            recognition.start();
+        }
+        activeInputElement = inputElement; // Set the active input element
+    }
+
+ 
+})
+    
+ 
+</script>
+ 
+  
+ </body>
 
 </html>
