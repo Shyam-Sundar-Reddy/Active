@@ -23,7 +23,7 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
  
   <style>
-  .acc_card:hover, .user_detail_wrapper_head:hover, .design_entity:hover {
+ .effect-on-hover:hover {
     box-shadow: 0 0 10px 2px orange;
     transition: box-shadow 0.3s ease;
 }
@@ -66,6 +66,7 @@
 
       </div>
       <div class="user_login_wrapper">
+        <input type="checkbox" id="enableSpeechRecognition" name="mice" value="X-pilate">
         <p class="user_name font-16">John Doe</p>
         <div class="user_logo"><img src="./images/userlogo.png" alt="userlogo"></div>
 
@@ -251,8 +252,8 @@
                     </select>
                   </div>
                   <div class="cancel_sub_btn">
-                    <button class="btn">Cancel</button>
-                    <button class="btn">Save</button>
+                    <button  id="Cancel" class="btn">Cancel</button>
+                    <button id="Save" class="btn">Save</button>
                   </div>
                 </div>
                 </div>
@@ -406,6 +407,19 @@
 <script src="./js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function() {
+  var userDetailWrappers = []; // This array will store references to the user_detail_wrapper divs
+
+  $('#enableSpeechRecognition').change(function() {
+        if (this.checked) {
+        
+          startRecognition();
+          $('.acc_card, .user_detail_wrapper_head, .design_entity').addClass('effect-on-hover');
+        } else {
+      
+          recognition.stop();
+          $('.acc_card, .user_detail_wrapper_head, .design_entity').removeClass('effect-on-hover');
+        }
+      });
   const config = {
         'single': [
             {type: 'text', placeholder: 'User Name', value: '', maxlength: '128'}
@@ -475,7 +489,7 @@ $(document).ready(function() {
                 console.log('Currently hovered div:', currentHoverDiv, 'Said:', command);
             } else if (currentHoverDiv === '.design_entity') {
                  console.log('Currently hovered div:', currentHoverDiv, 'Said:', command);
-        $('.design_entity').find('input, select').each(function() {
+        $('.design_entity').find('input, selec,button').each(function() {
 
             var id = $(this).attr('id');
             if (id && id.toLowerCase() === command.toLowerCase()) {
@@ -486,8 +500,13 @@ $(document).ready(function() {
                     $(this).focus();
                    
                 }
+                // else if ($(this).is('button')) {
+                //     $(this).focus();
+                //    console.log("btn event")
+                // }
                 return false;  
-            }
+           
+          }
         });
     }
 
@@ -516,7 +535,7 @@ console.log("ignore")
         });
 
         // Start recognition on page load
-        startRecognition();
+       // startRecognition();
     } else {
         console.log('Speech Recognition not supported in this browser.');
     }
