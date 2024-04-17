@@ -1,3 +1,5 @@
+ 
+				  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,10 +25,12 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
  
   <style>
- .effect-on-hover:hover {
-    box-shadow: 0 0 10px 2px orange;
+ 
+ .bloom-red {
+    box-shadow: 0 0 10px 2px red;
     transition: box-shadow 0.3s ease;
 }
+
 
   </style>
 </head>
@@ -217,7 +221,7 @@
                 <div class="design_entity">
                   <!-- <h6>Design your Entities</h6> -->
                   <div class="design_entity_wrapper">
-                    <div id="spokenText" style="margin-top: 20px; font-size: 20px; color: blue;"></div>
+                  
 
                   
                   <div class="deisgn_entity_content">
@@ -287,7 +291,7 @@
             <div class="tab-pane fade " id="Create_Project" role="tabpanel" aria-labelledby="home-tab"
               tabindex="0">
 
-              <h2 class="create_project_greeting font-24">Hi! 👋</h2>
+              <h2 class="create_project_greeting font-24">Hi! ??</h2>
               <p class="like_to_create font-18">What Would you Like to Create</p>
               <input type="text" class="form-control purpose_of_project font-15" placeholder="Enter Your Puspose">
               <div class="create_project_carousel">
@@ -406,241 +410,256 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script>
-$(document).ready(function() {
-  var userDetailWrappers = []; // This array will store references to the user_detail_wrapper divs
-
-  $('#enableSpeechRecognition').change(function() {
-        if (this.checked) {
-        
-          startRecognition();
-          $('.acc_card, .user_detail_wrapper_head, .design_entity').addClass('effect-on-hover');
-        } else {
-      
-          recognition.stop();
-          $('.acc_card, .user_detail_wrapper_head, .design_entity').removeClass('effect-on-hover');
-        }
-      });
-  const config = {
-        'single': [
-            {type: 'text', placeholder: 'User Name', value: '', maxlength: '128'}
-        ],
-        'multi': [
-            {type: 'text', placeholder: 'Display Name', value: '', maxlength: '256'}
-        ],
-        'mobile': [
-            {type: 'text', placeholder: 'Phone Number', value: '', maxlength: '10'}
-        ]
-    };
-
-    // Speech recognition setup
-    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (typeof SpeechRecognition !== "undefined") {
-        var recognition = new SpeechRecognition();
-        recognition.continuous = true; // Keep listening even after speech has stopped
-        recognition.lang = 'en-IND';
-        var recognizing = false; // A flag to keep track of whether recognition is active
-        var activeInputElement = null; // To keep track of the currently focused input
-        var currentHoverDiv = null; // To keep track of the currently hovered div
-
-        recognition.onstart = function() {
-            recognizing = true;
-        };
-
-        recognition.onerror = function(event) {
-            console.error('Speech recognition error:', event.error);
-            recognizing = false;
-        };
-
-        recognition.onend = function() {
-            recognizing = false;
-            // Automatically restart recognition if an input field is focused.
-            if (activeInputElement) {
-                recognition.start();
-            }
-        };
-
-        recognition.onresult = function(event) {
-            var last = event.results.length - 1;
-            var command = event.results[last][0].transcript.trim();
-          
-    if (activeInputElement) {
-       
-        $(activeInputElement).val(function(i, oldVal) {
-            return oldVal + ' ' + command;  
-        });
-    }
-    
-    
-    else {
-        console.log("No active input element. Recognized speech:", command);
-    }
-            if (currentHoverDiv === '.acc_card') {
-              for (var key in config) {
-                if (command.toLowerCase().includes(key)) {
-                    // Generate and append the UI based on the recognized command
-                    console.log('Sorting and adding class based on:', command);
-                    appendUIBasedOnCommand(key);
-                    break; // Exit after the first match to prevent multiple appends
-                }
-            }
-            
-            } else if (currentHoverDiv === '.user_detail_wrapper_head') {
-               
-                console.log('Currently hovered div:', currentHoverDiv, 'Said:', command);
-            } else if (currentHoverDiv === '.design_entity') {
-                 console.log('Currently hovered div:', currentHoverDiv, 'Said:', command);
-        $('.design_entity').find('input, selec,button').each(function() {
-
-            var id = $(this).attr('id');
-            if (id && id.toLowerCase() === command.toLowerCase()) {
-                // Perform the action based on the type of element
-                if ($(this).is('input')) {
-                    $(this).focus();
-                } else if ($(this).is('select')) {
-                    $(this).focus();
-                   
-                }
-                // else if ($(this).is('button')) {
-                //     $(this).focus();
-                //    console.log("btn event")
-                // }
-                return false;  
-           
+  $(document).ready(function() {
+      // Define commands
+      const comm = {
+          1: "Add",
+          2: "focus",
+          3: "remove",
+          4: "next",
+          5: "refresh",
+          6: "up", // New command for moving up
+          7: "down"
+      };
+  
+      const config = {
+          'single': [
+              {type: 'text', placeholder: 'User Name', value: '', maxlength: '128'}
+          ],
+          'multi': [
+              {type: 'text', placeholder: 'Display Name', value: '', maxlength: '256'}
+          ],
+          'mobile': [
+              {type: 'text', placeholder: 'Phone Number', value: '', maxlength: '10'}
+          ]
+      };
+  
+      // Counter variables initialization
+      let singleCounter = 1;
+      let mobileCounter = 1;
+      let multiCounter = 1;
+      let activeInputElement = null;
+      let recognition = null;
+  
+      // Attach event handlers
+      attachEventHandlers();
+  
+      // Function to initialize speech recognition
+      function initializeSpeechRecognition() {
+          var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+          if (typeof SpeechRecognition !== "undefined") {
+              var recognition = new SpeechRecognition();
+              recognition.continuous = true;
+              recognition.lang = 'en-IND';
+              recognition.onresult = processSpeechResult;
+              return recognition;
+          } else {
+              console.log('Speech Recognition not supported in this browser.');
+              return null;
           }
-        });
-    }
-
-            else if(activeInputElement){
-            $(activeInputElement).val(command); // Set the value of the active input element
-        }
-        else{
-console.log("ignore")
-        }
-        };
-
-        // Function to manage starting of speech recognition
-        function startRecognition() {
-            if (!recognizing) {
-                recognition.start();
-            }
-        }
-
-        // Attach focus and blur event handlers to input fields inside .user_detail_wrapper_head
-        $('.user_detail_wrapper_head,.design_entity').on('focus', 'input', function() {
-          startSpeechRecognitionForInput(this);
-            // No class is added here
-        }).on('blur', 'input', function() {
-            activeInputElement = null; // Clear the active input
-            
-        });
-
-        // Start recognition on page load
-       // startRecognition();
-    } else {
-        console.log('Speech Recognition not supported in this browser.');
-    }
-
-    // Function to append UI based on command
-    function appendUIBasedOnCommand(command) {
-        if (command in config) {
-            var content = generateContent(command, config[command]);
-            $('.user_detail_wrapper_head').append(content);
-        }
-    }
-
-    $(function() {
- // Make the .user_detail_wrapper_head accept drops
- $(".user_detail_wrapper_head").droppable({
-        accept: ".acc_card .single, .acc_card .multi, .acc_card .mobile",
-        drop: function(event, ui) {
-            // Extract the type from the dropped element's class
-            var type = ui.draggable.attr('class').split(' ')[1]; // Assuming the type is the second class
-            appendUIBasedOnCommand(type);
-        }
-    });
-
- // Make the elements inside .acc_card draggable
- $(".acc_card .single, .acc_card .multi, .acc_card .mobile").draggable({
-    helper: "clone",
-    revert: "invalid"
- });
-});
-
-    // Function to generate content based on type and fields
-    const imageSources = {
-        'single': './images/input_logo.png',
-        'multi': './images/question 2.png',
-        'mobile': './images/num_logo.png'
-    };
-
-    // Function to generate content based on type and fields
-    function generateContent(type, fields) {
-        let innerContent = fields.map(field => `
-            <div class="user_name_input">
-                <input type="${field.type}" placeholder="${field.placeholder}" value="${field.value}" class="form-control" maxlength="${field.maxlength}">
-            </div>
-            <div class="user_name_input">
-                <input type="${field.type}" placeholder="attributename" value="${field.value}" class="form-control" maxlength="${field.maxlength}">
-            </div>
-        `).join('');
-
-        let content = `
-            <div class="user_detail_wrapper">
-                <div class="${type}">
-                    <div class="uner_detail_inner">
-                        <div class="user_det_img"><img src="${imageSources[type]}" alt="${type}_logo"></div>
-                        ${innerContent}
-                        <div class="validity_wraper">
-                  <div class="circle_validity active"></div>
-                  <div class="fingure_validity"></div>
+      }
+  
+      // Function to process speech recognition result
+      function processSpeechResult(event) {
+          var last = event.results.length - 1;
+          var command = event.results[last][0].transcript.trim();
+          console.log('Recognized command:', command);
+  
+          var words = command.split(' ');
+  
+          if (words.length > 1 && comm[1].toLowerCase() === words[0].toLowerCase()) {
+              var fieldType = words[1].toLowerCase();
+              if (fieldType in config) {
+                  appendUIBasedOnCommand(fieldType);
+              }
+          } else if (words.length > 1 && comm[2].toLowerCase() === words[0].toLowerCase()) {
+              var fieldToSelect = words.slice(1).join(' ');
+              focusOnField(fieldToSelect);
+          } else if (words.length > 1 && comm[3].toLowerCase() === words[0].toLowerCase()) {
+              var fieldTypeToRemove = words[1].toLowerCase();
+              removeField(fieldTypeToRemove);
+          } else if (words.length === 1 && comm[4].toLowerCase() === words[0].toLowerCase()) {
+              bloomNext();
+          } else if (words.length === 1 && comm[6].toLowerCase() === words[0].toLowerCase()) {
+              // Handle the "up" command
+              bloomPrevious();
+          } else if (words.length === 1 && comm[7].toLowerCase() === words[0].toLowerCase()) {
+              // Handle the "down" command
+              bloomNext();
+          } else if (command.toLowerCase() === comm[3].toLowerCase()) {
+              removeBloomedDiv();
+          } else if (words.length === 1 && comm[5].toLowerCase() === words[0].toLowerCase()) {
+              // Handle the "refresh" command
+              $('.bloom-red').removeClass('bloom-red'); // Remove bloom from all elements
+              console.log('Refreshing...');
+          } else {
+              fillInputField(command);
+          }
+      }
+  
+      // Function to bloom the next div
+      function bloomNext() {
+          let activeBloom = $('.bloom-red');
+          if (activeBloom.length) {
+              let nextBloom = activeBloom.next('.user_detail_wrapper');
+              if (nextBloom.length) {
+                  activeBloom.removeClass('bloom-red');
+                  nextBloom.addClass('bloom-red');
+              } else {
+                  console.log('No next div to bloom.');
+              }
+          } else {
+              console.log('No div currently bloomed.');
+          }
+      }
+  
+      // Function to append UI based on command
+      function appendUIBasedOnCommand(command) {
+          var content = generateContent(command, config[command]);
+          $('.user_detail_wrapper_head').append(content);
+      }
+  
+      // Function to fill the selected input field
+      function fillInputField(value) {
+          if (activeInputElement) {
+              $(activeInputElement).val(value);
+          } else {
+              console.log('No input field is selected.');
+          }
+      }
+  
+      // Function to focus on field
+      function focusOnField(field) {
+          $('.design_entity, .user_detail_wrapper_head').find('input, select').each(function() {
+              var id = $(this).attr('id');
+              if (id && id.toLowerCase() === field.toLowerCase()) {
+                  $(this).focus();
+                  return false;
+              }
+          });
+      }
+  
+      // Function to remove the bloomed div from user_detail_wrapper_head div and bloom the next one
+      function removeBloomedDiv() {
+          let activeBloom = $('.user_detail_wrapper_head .bloom-red');
+          if (activeBloom.length) {
+              // Remove the div from the DOM
+              activeBloom.remove();
+  
+              // Find the next div that should be bloomed
+              let nextBloom = $('.user_detail_wrapper_head .user_detail_wrapper').first();
+              if (nextBloom.length) {
+                  // Apply the bloom-red class to the next div
+                  nextBloom.addClass('bloom-red');
+              } else {
+                  console.log('No next div to bloom.');
+              }
+          } else {
+              console.log('No div currently bloomed.');
+          }
+      }
+  
+      // Function to highlight field instead of removing it
+      function removeField(fieldTypeToRemove) {
+          var firstElementToRemove = $('.user_detail_wrapper[id^="' + fieldTypeToRemove + '"]:first');
+          if (firstElementToRemove.length > 0) {
+              // Remove the bloom-red class from all elements
+              $('.user_detail_wrapper').removeClass('bloom-red');
+  
+              // Add the bloom-red class only to the first targeted element
+              firstElementToRemove.addClass('bloom-red');
+          } else {
+              console.log('No elements with ID starting with "' + fieldTypeToRemove + '" found.');
+          }
+      }
+  
+      const imageSources = {
+          'single': './images/input_logo.png',
+          'multi': './images/question 2.png',
+          'mobile': './images/num_logo.png'
+      };
+  
+      // Function to generate content based on type and fields
+      function generateContent(type, fields) {
+          let innerContent = fields.map(field => `
+              <div class="user_name_input">
+                  <input type="${field.type}" placeholder="${field.placeholder}" value="${field.value}" class="form-control" maxlength="${field.maxlength}">
+              </div>
+          `).join('');
+  
+          let content = `
+              <div class="user_detail_wrapper" id="${type} ${getTypeCounter(type)}">
+                  <div class="${type}">
+                      <div class="uner_detail_inner">
+                          <div class="user_det_img"><img src="${imageSources[type]}" alt="${type}_logo"></div>
+                          ${innerContent}
+                          <div class="user_name_input">
+                              <input type="text" placeholder="attributename" class="form-control">
+                          </div>
+                          <div class="validity_wraper">
+                              <div class="circle_validity active"></div>
+                              <div class="fingure_validity"></div>
+                          </div>
+                          <div class="choose_type_date">
+                              <input type="number" value="0" class="form-control">
+                              <input type="number" value="128" class="form-control">
+                          </div>
+                          <div class="cancel_wrapper">
+                              <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
+                          </div>
+                      </div>
                   </div>
-                        <div class="choose_type_date">
-                            <input type="number" value="0" class="form-control">
-                            <input type="number" value="${type === 'multi' ? '256' : '128'}" class="form-control">
-                        </div>
-                        <div class="cancel_wrapper">
-                            <div class="cancel_btn"><img src="./images/circle_red_circle.png" alt="cancel_btn"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-        return content;
-    }
-
-    // Function to append UI based on command
-    function appendUIBasedOnCommand(command) {
-        if (command in config) {
-            var content = generateContent(command, config[command]);
-            $('.user_detail_wrapper_head').append(content);
-        }
-    }
-   
-    var focusDivSelectors = ['.acc_card', '.user_detail_wrapper_head', '.design_entity'];
+              </div>`;
+          return content;
+      }
+  
+      // Function to get the counter based on the type
+      function getTypeCounter(res) {
+          switch (res) {
+              case 'single':
+                  return singleCounter++;
+              case 'multi':
+                  return multiCounter++;
+              case 'mobile':
+                  return mobileCounter++;
+              default:
+                  return 0;
+          }
+      }
+  
+      // Function to attach event handlers
+      function attachEventHandlers() {
+          $('.design_entity, .user_detail_wrapper_head').on('click focus', 'input, select', function() {
+              activeInputElement = this;
+          });
+          $('.design_entity, .user_detail_wrapper_head').on('blur', 'input, select', function() {
+              activeInputElement = null; // Clear activeInputElement when an input field loses focus
+          });
+          $('#enableSpeechRecognition').change(function() {
+              if (this.checked) {
+                  if (!recognition) {
+                      recognition = initializeSpeechRecognition();
+                  }
+                  if (recognition) {
+                      recognition.start();
+                  }
+              } else if (recognition) {
+                  recognition.stop();
+              }
+          });
+  
+          // Initialize speech recognition if checkbox is initially checked
+          if ($('#enableSpeechRecognition').is(":checked")) {
+              recognition = initializeSpeechRecognition();
+          }
+      }
+  });
+  </script>
  
-// Attach event listeners for hover (enter/leave) events to specified divs
-focusDivSelectors.forEach(function(selector) {
-        $(selector).on('mouseenter', function() {
-            currentHoverDiv = selector;
-        }).on('mouseleave', function() {
-            currentHoverDiv = null;
-        });
-    });
-
-  // New function to handle speech recognition for input fields
-  function startSpeechRecognitionForInput(inputElement) {
-        if (!recognizing) {
-            recognition.start();
-        }
-        activeInputElement = inputElement; // Set the active input element
-    }
-
- 
-})
-    
- 
-</script>
+  
  
   
  </body>
 
 </html>
+

@@ -156,13 +156,12 @@ $(function() {
     } else if (command === "focus entity") {
         // Apply glow effect only to the Entity div
         $("#Entity").addClass('glow');
-    } else if (command.startsWith("bloom ")) {
-        // Check if the entity is focused
-        if ($("#Entity").hasClass('glow')) {
-            // Extract the class name to bloom
-            var classNameToBloom = command.split(" ")[1];
-            // Apply glow effect to the specified class within the entity
-            $("#Entity ." + classNameToBloom).addClass('glow');
+    } else if (command === "bloom entity" || command === "bloom control") {
+        // Apply glow effect based on the command
+        if (command === "bloom entity") {
+            $("#Entity").addClass('glow');
+        } else {
+            $(".draggable").addClass('glow');
         }
     } else {
         // Existing logic for other commands
