@@ -459,6 +459,26 @@
           }
       }
   
+     
+function checkMicrophoneStatus() {
+  
+ if ($('#enableSpeechRecognition').is(":checked")) {
+     
+   
+    if (!recognition) {
+      recognition = initializeSpeechRecognition();
+      console.log("mic is in off")
+    }
+    if (recognition) {
+      console.log("allow mic")
+      recognition.start();
+
+    }
+ }
+}
+
+// Set an interval to check the microphone status every 20 seconds
+setInterval(checkMicrophoneStatus, 1000); // 20000 milliseconds = 20 seconds
       // Function to process speech recognition result
       function processSpeechResult(event) {
           var last = event.results.length - 1;
@@ -662,4 +682,3 @@
  </body>
 
 </html>
-
